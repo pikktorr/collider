@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>collider.one</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div className="app-container">
+      <div className="nav-container">
+        <img className="nav-logo" src="{logo}" alt="" />
+        <ul className="nav-menu">
+          <!-- -- MOBILE MENU -- -->
+          <!-- <ul className={addClass ? "nav-menu active" : "nav-menu display-none"}>  -->
+          <li>Home</li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Skills</li>
+          <li>Contact</li>
+        </ul>
+         <!-- -- MOBILE MENU BUTTON -- 
+         <Hamburger className={!addClass ?
+        "hamburger-icon" : "display-none"} onClick={togglemenu} /> <Close
+        className={addClass ? "close-icon" : "display-none"}
+        onClick={togglemenu} />  -->
+      </div>
+      <Background />
+      <About />
+      <ProjectList />
+      <Slide />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
