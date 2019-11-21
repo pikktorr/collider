@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>collider.one</title>
-    <link rel="stylesheet" href="./styles.css" />
-
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <div class="app-container">
       <!-- // NAVIGATION -->
       <nav class="nav-container">
-        <img class="nav-logo" src="{logo}" alt="" />
+        <img
+          class="nav-logo"
+          src="./images/navigation/name-logo.svg"
+          alt="collider.one logo"
+        />
         <ul class="nav-menu">
           <!-- -- MOBILE MENU -- -->
           <!-- <ul class={addClass ? "nav-menu active" : "nav-menu display-none"}>  -->
           <li>Home</li>
           <li>About</li>
           <li>Projects</li>
+          <li>Gallery</li>
           <li>Skills</li>
           <li>Contact</li>
         </ul>
@@ -31,7 +35,7 @@
       <!-- NAVIGATION // -->
       <!-- // BACKGROUND -->
       <div class="bg-container">
-        <img class="bg-logo" src="{logo}" alt="" />
+        <img class="bg-logo" src="./images/background/logo.svg" alt="" />
       </div>
       <!-- BACKGROUND // -->
 
@@ -71,7 +75,7 @@
       <section class="projectList-container">
         <h1 class="projectList-title">Projects</h1>
         <div class="projectList">
-          <div class="project-container">
+          <article class="project-container">
             <div class="project-image">
               <img src="" alt="" />
             </div>
@@ -90,21 +94,17 @@
                 <span>Show More</span>
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </section>
       <!-- PROJECTS // -->
       <!-- // SLIDESHOW -->
-      <div class="slide-container">
+      <section class="slide-container">
         <h1 class="slide-title">Gallery</h1>
         <div class="slide-image">
-          <img
-            class="active"
-            src="{images[0].url}"
-            alt="{images[0].caption}"
-          />
+          <img class="active" src="{images[0].url}" alt="{images[0].caption}" />
           <div class="caption-container">
-            <div class="caption-text">{images[0].caption}</div>
+            <div class="caption-text">Caption</div>
             <div class="caption-dots">
               <span class="dot" onclick="currentSlide(1)"></span>
               <span class="dot" onclick="currentSlide(2)"></span>
@@ -114,10 +114,24 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- SLIDESHOW // -->
-    </div>
+      <!-- // SKILLS -->
+      <section class="skills-container">
+        <h1 class="skills-title">Skills</h1>
+        <div class="skills-badges">
+          <div class="badge" >
+            <div class="badge-img">
+              <img src="" alt="">
+            </div>
+            <h3 class="badge-name">Badge Name</h3>
+          </div>
+        </div>
+      </section>
+      <!-- SKILLS // -->
 
+
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
