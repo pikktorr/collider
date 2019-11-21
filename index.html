@@ -5,31 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>collider.one</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
   </head>
   <body>
-    <div className="app-container">
-      <div className="nav-container">
-        <img className="nav-logo" src="{logo}" alt="" />
-        <ul className="nav-menu">
+    <div class="app-container">
+      <!-- // NAVIGATION -->
+      <nav class="nav-container">
+        <img class="nav-logo" src="{logo}" alt="" />
+        <ul class="nav-menu">
           <!-- -- MOBILE MENU -- -->
-          <!-- <ul className={addClass ? "nav-menu active" : "nav-menu display-none"}>  -->
+          <!-- <ul class={addClass ? "nav-menu active" : "nav-menu display-none"}>  -->
           <li>Home</li>
           <li>About</li>
           <li>Projects</li>
           <li>Skills</li>
           <li>Contact</li>
         </ul>
-         <!-- -- MOBILE MENU BUTTON -- 
-         <Hamburger className={!addClass ?
+        <!-- -- MOBILE MENU BUTTON -- 
+         <Hamburger class={!addClass ?
         "hamburger-icon" : "display-none"} onClick={togglemenu} /> <Close
-        className={addClass ? "close-icon" : "display-none"}
+        class={addClass ? "close-icon" : "display-none"}
         onClick={togglemenu} />  -->
+      </nav>
+      <!-- NAVIGATION // -->
+      <!-- // BACKGROUND -->
+      <div class="bg-container">
+        <img class="bg-logo" src="{logo}" alt="" />
       </div>
-      <Background />
-      <About />
-      <ProjectList />
-      <Slide />
+      <!-- BACKGROUND // -->
+
+      <!-- // ABOUT -->
+      <section class="about-container">
+        <h1 class="about-title">About</h1>
+        <div class="about-paragraph">
+          <h2>
+            Greetings! I'm Viktor, working as an Architect based in Szeged. I
+            design family houses and public buildings, besides I’m working in
+            UX/UI Design and Front-End Development.
+          </h2>
+          <br />
+          <p>
+            Because of my profession I like to operate precisely and thoroughly,
+            with high aesthetic values and aiming for the best user experience.
+            <br />
+            Right now I'm working on home projects in UX/UI Design - Figma,
+            Adobe XD, Affinity Photo, Photoshop, Illustrator, InDesign - and
+            Front-End Development - Javascript, React.js, Node.js, PostgreSQL -
+            to try myself in the information and tech industry. Music, books and
+            games are my favourite hobbies, always open for a classical meme for
+            a good laugh!
+          </p>
+          <br />
+          <i>
+            "I love inside jokes. I'd love to be a part of one someday." <br />
+            Michael Scott - The Office
+          </i>
+        </div>
+        <div class="about-profile">
+          <img src="" alt="" />
+        </div>
+      </section>
+      <!-- ABOUT // -->
+      <!-- // PROJECTS -->
+      <section class="projectList-container">
+        <h1 class="projectList-title">Projects</h1>
+        <div class="projectList">
+          <div class="project-container">
+            <div class="project-image">
+              <img src="" alt="" />
+            </div>
+            <div class="project-text">
+              <h2 class="project-title">{title}</h2>
+              <p class="project-tool">({tool})</p>
+              <br />
+              <p>{about}</p>
+              <br />
+              <a
+                class="project-link"
+                href="{link}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Show More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS // -->
+      <!-- // SLIDESHOW -->
+      <div class="slide-container">
+        <h1 class="slide-title">Gallery</h1>
+        <div class="slide-image">
+          <img
+            class="active"
+            src="{images[0].url}"
+            alt="{images[0].caption}"
+          />
+          <div class="caption-container">
+            <div class="caption-text">{images[0].caption}</div>
+            <div class="caption-dots">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SLIDESHOW // -->
     </div>
 
     <script src="app.js"></script>
