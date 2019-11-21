@@ -1,0 +1,39 @@
+.projectList-container {
+  min-height: 100vh;
+  width: 60em;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "projectList";
+  align-items: center;
+  gap:10em;
+  margin-bottom: 15em;
+}
+
+.projectList-title {
+  grid-area: title;
+  text-decoration: underline;
+  text-decoration-color: rgba(188, 225, 234, 1);
+  align-self: end;
+}
+
+.projectList {
+  grid-area: projectList;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.programming {
+  justify-self: center;
+}
+
+hr{
+  justify-self:center;
+  border: 1px solid rgb(60,60,60,0.2);
+  width: 100%;
+  margin: 2em;
+}

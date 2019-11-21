@@ -1,0 +1,73 @@
+.slide-container {
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    ". title ."
+    "image image image"
+    "caption caption caption";
+  grid-template-columns: 1fr 60em 1fr;
+  grid-template-rows: 10vh 90vh;
+  align-items: center;
+  position: relative;
+}
+
+.slide-title {
+  grid-area: title;
+  text-decoration: underline;
+  text-decoration-color: rgba(188, 225, 234, 1);
+}
+
+.slide-image {
+  grid-area: image;
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.slide-image img{
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-color: rgba(79, 145, 159, 1);
+}
+
+.caption-container {
+  grid-area: caption;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(79, 145, 159, 0.5);
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.caption-text {
+  color: white;
+  margin-bottom: 10px;
+  max-width: 60em;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(79, 145, 159, 1);
+}
