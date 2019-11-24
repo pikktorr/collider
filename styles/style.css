@@ -10,6 +10,7 @@
 
 html {
   max-height: 100vh;
+  scroll-behavior: smooth;
   /* background-color: $anthracite; NIGHT MODE BACKGROUND*/
 }
 
@@ -439,6 +440,37 @@ h1 {
 
 .skills-container .skills-badges .badge .badge-name {
   margin-top: 0.7rem;
+}
+
+.contact-container {
+  background-color: #8ae1e9;
+  width: 100%;
+  height: 100%;
+  height: 50vh;
+  width: 60rem;
+  margin: auto;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3fr 1fr 1fr;
+      grid-template-rows: 3fr 1fr 1fr;
+}
+
+.contact-container .contact-profile {
+  width: 10em;
+  height: 10em;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-container .contact-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 /* MEDIA-QUERIES */

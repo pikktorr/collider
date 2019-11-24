@@ -1,4 +1,4 @@
-const projects = [
+export const Projects = [
   {
     "title": "Smart-Brain",
     "tool": "React.js, PostgreSQL",
