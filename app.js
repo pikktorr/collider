@@ -68,28 +68,32 @@ const smoothScroll = (target, duration) => {
   const distance = targetPosition - startPosition;
   let startTime = null;
 
-  const animation = (currentTime) => {
-    startTime ? startTime=currentTime : startTime;
+  const animation = currentTime => {
+    startTime ? (startTime = currentTime) : startTime;
     const timeElapsed = currentTime - startTime;
-    console.log('start time:', startTime);
-    console.log('current time:', currentTime);
-    console.log('elapsed:', timeElapsed);
-    const run = easeInOutQuad()
+    console.log("start time:", startTime);
+    console.log("current time:", currentTime);
+    console.log("elapsed:", timeElapsed);
+    const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
   };
 
-  Math.easeInOutQuad = (t, b, c, d) => {
-    t /= d/2;
-    if (t < 1) return c/2*t*t + b;
+  const easeInOutQuad = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
     t--;
-    return -c/2 * (t*(t-2) - 1) + b;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
   };
-  
 
   requestAnimationFrame(animation);
-
 };
 
-smoothScroll("#skills-section", 1000);
+const skillSection = document.querySelector("#nav-skills");
+console.log(skillSection);
+skillSection.addEventListener("click", () => {
+  smoothScroll("#skills-section", 1000);
+});
 
 // PROJECTS
 
