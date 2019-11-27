@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <div class="app-container">
+    <div class="app-container" id="home-section">
       <!-- NAVIGATION -->
       <nav class="nav-container">
         <img
@@ -19,12 +19,12 @@
         <ul class="nav-menu">
           <!-- -- MOBILE MENU -- -->
           <!-- <ul class={addClass ? "nav-menu active" : "nav-menu display-none"}>  -->
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Gallery</li>
+          <li id="nav-home">Home</li>
+          <li id="nav-about">About</li>
+          <li id="nav-projects">Projects</li>
+          <li id="nav-gallery">Gallery</li>
           <li id="nav-skills">Skills</li>
-          <li>Contact</li>
+          <li id="nav-contact">Contact</li>
         </ul>
         <!-- -- MOBILE MENU BUTTON -- 
          <Hamburger class={!addClass ?
@@ -32,12 +32,12 @@
         class={addClass ? "close-icon" : "display-none"}
         onClick={togglemenu} />  -->
       </nav>
-      <!-- BACKGROUND -->
+      <!-- HERO -->
       <div class="bg-container">
         <img class="bg-logo" src="./images/background/logo.svg" alt="" />
       </div>
       <!-- ABOUT -->
-      <section class="about-container">
+      <section class="about-container" id="about-section">
         <h1 class="about-title">About</h1>
         <div class="about-paragraph">
           <h2>
@@ -68,7 +68,7 @@
         </div>
       </section>
       <!-- PROJECTS -->
-      <section class="projectList-container">
+      <section class="projectList-container" id="projects-section">
         <h1 class="projectList-title">Projects</h1>
         <div class="projectList">
           <article class="project-container">
@@ -93,8 +93,8 @@
           </article>
         </div>
       </section>
-      <!-- SLIDESHOW -->
-      <section class="slide-container">
+      <!-- GALLERY -->
+      <section class="slide-container" id="gallery-section">
         <h1 class="slide-title">Gallery</h1>
         <div class="slide-image">
           <img class="" src="" alt="" />
@@ -118,7 +118,7 @@
         </div>
       </section>
       <!-- CONTACT -->
-      <section class="contact-container">
+      <section class="contact-container" id="contact-section">
         <div class="contact-profile">
           <img src="" alt="" />
         </div>

@@ -60,40 +60,36 @@ const skills = [
   }
 ];
 
-// NAVIGATION - SMOOTH SCROLL
-const smoothScroll = (target, duration) => {
-  target = document.querySelector(target);
-  const targetPosition = target.getBoundingClientRect().top;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  let startTime = null;
+// NAVIGATION - SCROLL
 
-  const animation = currentTime => {
-    startTime ? (startTime = currentTime) : startTime;
-    const timeElapsed = currentTime - startTime;
-    console.log("start time:", startTime);
-    console.log("current time:", currentTime);
-    console.log("elapsed:", timeElapsed);
-    const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  };
-
-  const easeInOutQuad = (t, b, c, d) => {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
-
-  requestAnimationFrame(animation);
+const scrollPage = targetId => {
+  const target = document.querySelector(targetId);
+  const targetLeftPosition = target.getBoundingClientRect().left;
+  const targetTopPosition = target.getBoundingClientRect().top;
+  window.scrollTo(targetLeftPosition, targetTopPosition);
+  // without options, it works with Edge and Safari
 };
 
-const skillSection = document.querySelector("#nav-skills");
-console.log(skillSection);
-skillSection.addEventListener("click", () => {
-  smoothScroll("#skills-section", 1000);
+const navToSections = [
+  { nav: "#nav-home", section: "#home-section" },
+  { nav: "#nav-about", section: "#about-section" },
+  { nav: "#nav-projects", section: "#projects-section" },
+  { nav: "#nav-gallery", section: "#gallery-section" },
+  { nav: "#nav-skills", section: "#skills-section" },
+  { nav: "#nav-contact", section: "#contact-section" }
+];
+
+navToSections.map(element => {
+  const navButton = document.querySelector(element.nav);
+  navButton.addEventListener("click", () => {
+    scrollPage(element.section);
+  });
 });
+
+// const skillsButton = document.querySelector("#nav-skills");
+// skillsButton.addEventListener("click", () => {
+//   scrollPage("#skills-section");
+// });
 
 // PROJECTS
 
