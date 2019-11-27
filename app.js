@@ -70,10 +70,23 @@ const smoothScroll = (target, duration) => {
 
   const animation = (currentTime) => {
     startTime ? startTime=currentTime : startTime;
+    const timeElapsed = currentTime - startTime;
+    console.log('start time:', startTime);
+    console.log('current time:', currentTime);
+    console.log('elapsed:', timeElapsed);
+    const run = easeInOutQuad()
   };
 
+  Math.easeInOutQuad = (t, b, c, d) => {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+  };
+  
 
-  console.log(distance);
+  requestAnimationFrame(animation);
+
 };
 
 smoothScroll("#skills-section", 1000);
