@@ -2,9 +2,10 @@
   "name": "landing-page",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./src/js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
     "url": "https://github.com/pikktorr/landing-page/issues"
   },
   "homepage": "https://github.com/pikktorr/landing-page#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.7"
+  }
 }
