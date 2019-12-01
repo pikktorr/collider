@@ -23,20 +23,28 @@ h1 {
   position: relative;
 }
 .back-to-top {
+  // background-color: bisque;
   position: fixed;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   right: 5%;
-  bottom: 10%;
-  border-radius: 60%;
-  padding: 10px;
+  bottom: 7%;
+  border-radius: 50%;
   text-align: center;
   z-index: 99;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.3;
   &:hover {
     background-color: white;
+    opacity: 1;
     box-shadow: $shadow;
     cursor: pointer;
+  }
+  img{
+    // background-color: aqua;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.75rem;
   }
 }
 // NAVIGATION
