@@ -1,3 +1,6 @@
+import { projects } from "./projects";
+import { skills } from "./skills";
+
 //NAVIGATION - BACK TO TOP
 
 const topButton = document.querySelector(".back-to-top");
@@ -11,9 +14,6 @@ window.onscroll = () => scrollFunction();
 topButton.onclick = () => window.scrollTo(0, 0);
 
 // NAVIGATION - SCROLL
-
-import { skills } from "./skills";
-
 const scrollPage = targetId => {
   const target = document.querySelector(targetId);
   const targetLeftPosition = target.getBoundingClientRect().left;
@@ -39,6 +39,34 @@ navToSections.map(element => {
 });
 
 // PROJECTS
+const projectList = document.querySelector(".projectList");
+console.log(projectList);
+projects.map((project, index) => {
+  const oneProject = document.createElement("article");
+  oneProject.className = "project-container";
+  oneProject.innerHTML = `
+    <div class="project-image">
+                <img src="" alt="" />
+              </div>
+              <div class="project-text">
+                <h2 class="project-title">${project.title}</h2>
+                <p class="project-tool">(${project.tool})</p>
+                <br />
+                <p>{about}</p>
+                <br />
+                <a
+                  class="project-link"
+                  href="{link}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Show More</span>
+                </a>
+              </div>
+  `;
+
+  return projectList.appendChild(oneProject);
+});
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");

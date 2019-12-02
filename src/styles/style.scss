@@ -25,15 +25,15 @@ h1 {
 .back-to-top {
   // background-color: bisque;
   position: fixed;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   right: 5%;
   bottom: 7%;
   border-radius: 50%;
   text-align: center;
   z-index: 99;
   transition: all 0.3s ease-in-out;
-  opacity: 0.3;
+  opacity: 0.5;
   &:hover {
     background-color: white;
     opacity: 1;
@@ -42,9 +42,9 @@ h1 {
   }
   img{
     // background-color: aqua;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.6rem;
   }
 }
 // NAVIGATION
@@ -169,6 +169,8 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 2em;
+    box-shadow: $shadow;
+
     .project-container {
       display: grid;
       grid-template-areas: "image text";
