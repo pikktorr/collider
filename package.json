@@ -5,7 +5,8 @@
   "main": "./src/js/index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "cleanup": "rm -rf .cache dist"
   },
   "repository": {
     "type": "git",

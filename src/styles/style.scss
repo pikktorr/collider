@@ -4,21 +4,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   color: $anthracite;
   /* color: rgb(240, 240, 240); NIGHT MODE COLOR*/
 }
 
 html {
+  font-family: "Poppins", sans-serif;
   max-height: 100vh;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   /* background-color: $anthracite; NIGHT MODE BACKGROUND*/
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    line-height: 130%;
+  }
+  p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 170%;
+  }
 }
 
-h1 {
-  font-size: 2rem;
-}
 .app-container {
   position: relative;
 }
@@ -40,7 +47,7 @@ h1 {
     box-shadow: $shadow;
     cursor: pointer;
   }
-  img{
+  img {
     // background-color: aqua;
     width: 2.5rem;
     height: 2.5rem;
@@ -146,21 +153,20 @@ h1 {
 
 // PROJECTS
 .projectList-container {
-  // @include placeholdercard(rgb(57, 209, 236), 100%, 100%);
   min-height: 100vh;
   width: 60rem;
   scroll-snap-align: start;
   margin: auto;
   display: grid;
+  gap: 3rem;
   grid-template-areas:
     "title"
     "projectList";
   align-items: center;
-  gap: 10em;
   margin-bottom: 15em;
   .projectList-title {
+    margin-top: 3rem;
     @include titles();
-    align-self: end;
   }
   .projectList {
     grid-area: projectList;
@@ -169,36 +175,34 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 2em;
-    box-shadow: $shadow;
-
     .project-container {
       display: grid;
       grid-template-areas: "image text";
-      grid-template-columns: 20em 1fr;
-      gap: 4em;
+      grid-template-columns: 20rem 2fr;
+      gap: 2em;
       align-items: center;
-      .project-image {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        box-shadow: $shadow;
+        transform: scale(1.01);
+        border-radius: 0.5rem;
+      }
+      .project-image{
         grid-area: image;
-        width: 20em;
-        height: 20em;
-        border-radius: 0.2em;
-        cursor: pointer;
-        transition: all 0.4s ease-in-out;
-        &:hover {
-          box-shadow: $shadow;
-          transform: scale(1.01);
+        width: 20rem;
+        height: 20rem;
+        img{
+          object-fit: cover; 
+          border-radius: 0.5rem;
+          width: 90%;
+          height: 90%;
+          margin: 5%;
         }
       }
       .project-text {
         grid-area: text;
-        .project-link {
-          cursor: pointer;
-          border-bottom: 1px solid $anthracite;
-          text-decoration: none;
-          &:hover {
-            border-bottom: 3px solid $lightblue;
-          }
-        }
+        margin-right: 3rem;
       }
     }
   }
@@ -215,11 +219,13 @@ h1 {
     "image image image"
     "caption caption caption";
   grid-template-columns: 1fr 60rem 1fr;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 15vh 85vh;
   align-items: center;
   position: relative;
+  background-color: $blue;
   .slide-title {
     @include titles();
+    color: $white;
   }
   .slide-image {
     grid-area: image;
@@ -236,7 +242,6 @@ h1 {
       height: 100%;
       width: 100%;
       object-fit: contain;
-      background-color: $blue;
     }
     .caption-container {
       grid-area: caption;

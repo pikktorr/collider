@@ -46,25 +46,19 @@ projects.map((project, index) => {
   oneProject.className = "project-container";
   oneProject.innerHTML = `
     <div class="project-image">
-                <img src="" alt="" />
+                <img src=${project.image} alt=${project.title.replace(
+    /\s/g,
+    ""
+  )} />
               </div>
               <div class="project-text">
                 <h2 class="project-title">${project.title}</h2>
                 <p class="project-tool">(${project.tool})</p>
                 <br />
-                <p>{about}</p>
-                <br />
-                <a
-                  class="project-link"
-                  href="{link}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Show More</span>
-                </a>
+                <p>${project.about}</p>
               </div>
   `;
-
+  oneProject.addEventListener("click", () => window.open(project.link));
   return projectList.appendChild(oneProject);
 });
 
