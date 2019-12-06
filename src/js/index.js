@@ -1,5 +1,5 @@
-import { projects } from "./projects";
-import { skills } from "./skills";
+import { projects } from "./lists";
+import { skills } from "./lists";
 
 //NAVIGATION - BACK TO TOP
 
@@ -46,7 +46,7 @@ projects.map((project, index) => {
   oneProject.className = "project-container";
   oneProject.innerHTML = `
     <div class="project-image">
-                <img src=${project.image} alt=${project.title.replace(
+                <img src=${project.image}  alt=${project.title.replace(
     /\s/g,
     ""
   )} />
@@ -69,14 +69,9 @@ skills.map((skill, index) => {
   const badge = document.createElement("article");
   badge.className = `badge skill${index}`;
   badge.innerHTML = `
-  <div class="badge-img">
-    <img src=${skill.image} alt=${skill.name.replace(/\s/g, "")} />
-  </div>
-  <h4 class="badge-name">${skill.name}</h4>
+  <div class="badge-img" title=${skill.name.replace(/\s/g,"")}>
+    <img src=${skill.image}  alt=${skill.name.replace(/\s/g,"")} /></div>
   `;
-
-  badge.addEventListener("click", () => window.open(skill.url));
-  skill.url ? badge.setAttribute("style", "cursor:pointer") : badge;
 
   return skillsBadges.appendChild(badge);
 });
