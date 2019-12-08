@@ -28,6 +28,7 @@ html {
 
 .app-container {
   position: relative;
+
 }
 .back-to-top {
   // background-color: bisque;
@@ -188,12 +189,12 @@ html {
         transform: scale(1.01);
         border-radius: 0.1rem;
       }
-      .project-image{
+      .project-image {
         grid-area: image;
         width: 20rem;
         height: 20rem;
-        img{
-          object-fit: cover; 
+        img {
+          object-fit: cover;
           border-radius: 0.2rem;
           width: 90%;
           height: 90%;
@@ -209,6 +210,7 @@ html {
 }
 
 // SLIDESHOW
+
 .slide-container {
   height: 100vh;
   scroll-snap-align: start;
@@ -223,6 +225,7 @@ html {
   align-items: center;
   position: relative;
   background-color: $blue;
+  transition: background 0.3s ease-in-out;
   .slide-title {
     @include titles();
     color: $white;
@@ -294,7 +297,7 @@ html {
   }
   .skills-badges {
     grid-area: badges;
-    @include placeholdercard(white,100%, 100%);
+    @include placeholdercard(white, 100%, 100%);
     justify-self: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
@@ -302,13 +305,13 @@ html {
     gap: 2rem;
     justify-items: center;
     align-items: center;
-      .badge {
+    .badge {
       text-align: center;
       transition: transform 0.2s linear;
       &:hover {
         transform: scale(1.05);
       }
-      img{
+      img {
         width: 100%;
         object-fit: cover;
       }

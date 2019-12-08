@@ -19,6 +19,7 @@ const scrollPage = targetId => {
   const targetLeftPosition = target.getBoundingClientRect().left;
   const targetTopPosition = target.getBoundingClientRect().top;
   window.scrollTo(targetLeftPosition, targetTopPosition);
+  console.log(targetTopPosition);
   // without options, it works with Edge and Safari
 };
 
@@ -62,6 +63,24 @@ projects.map((project, index) => {
   return projectList.appendChild(oneProject);
 });
 
+//GALLERY
+
+const sectionTransition = () => {
+  const gallerySection = document.querySelector("#gallery-section");
+  const galleryTop = gallerySection.getBoundingClientRect().top;
+  console.log(gallerySection.getBoundingClientRect().top);
+  if (
+    galleryTop < window.innerHeight / 1.5 &&
+    galleryTop > -(window.innerHeight / 1.5)
+  ) {
+    gallerySection.classList.add("background");
+  } else {
+    gallerySection.classList.remove("background");
+  }
+};
+
+window.addEventListener("scroll", sectionTransition);
+
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
 
@@ -69,8 +88,8 @@ skills.map((skill, index) => {
   const badge = document.createElement("article");
   badge.className = `badge skill${index}`;
   badge.innerHTML = `
-  <div class="badge-img" title=${skill.name.replace(/\s/g,"")}>
-    <img src=${skill.image}  alt=${skill.name.replace(/\s/g,"")} /></div>
+  <div class="badge-img" title=${skill.name.replace(/\s/g, "")}>
+    <img src=${skill.image}  alt=${skill.name.replace(/\s/g, "")} /></div>
   `;
 
   return skillsBadges.appendChild(badge);
