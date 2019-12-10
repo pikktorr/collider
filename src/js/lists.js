@@ -59,7 +59,7 @@ export const projects = [
 
 export const slideshow = [
   {
-    image: require("../images/gallery/#1_You_wake_up_in_a_forest.png"),
+    image: require("../images/gallery/Untitled_Artwork.png"),
     title: "You wake up in a forest..."
   },
   {
@@ -71,7 +71,7 @@ export const slideshow = [
     title: "Witcher medal"
   },
   {
-    image: require("../images/gallery/#5_Need_Potion.png"),
+    image: require("../images/gallery/IMG_0093.png"),
     title: "Need potion!"
   }
 ];
@@ -101,6 +101,10 @@ export const skills = [
     image: require("../images/skills/cinema4d.jpg"),
     name: "Cinema 4D"
   },
+                  {
+                    image: require("../images/skills/commandline.png"),
+                    name: "Command Line"
+                  },
   {
     image: require("../images/skills/css.png"),
     name: "CSS3"
@@ -192,10 +196,6 @@ export const skills = [
   {
     image: require("../images/skills/sketchup.png"),
     name: "Sketchup"
-  },
-  {
-    image: require("../images/skills/terminal.png"),
-    name: "Terminal"
   },
   {
     image: require("../images/skills/trello.png"),

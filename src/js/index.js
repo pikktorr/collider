@@ -1,4 +1,5 @@
 import { projects } from "./lists";
+import { slideshow } from "./lists";
 import { skills } from "./lists";
 
 //NAVIGATION - BACK TO TOP
@@ -64,6 +65,26 @@ projects.map((project, index) => {
 });
 
 //AUTOMATIC SLIDESHOW
+const gallerySection = document.querySelector(".slide-container");
+
+let slideIndex = 0;
+
+const showSlides = () => {
+  const slides = document.querySelectorAll(".slide-image");
+  slides.forEach( (slide,index)=>{
+    slide.style.visibility = "hidden";
+  });
+  slideIndex >= slides.length ? slideIndex = 0 : slideIndex;
+  slides[slideIndex].style.visibility = "visible";
+  slideIndex++;
+  setTimeout(showSlides, 3000);
+};
+
+showSlides();
+
+
+
+
 
 
 
