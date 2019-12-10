@@ -57,6 +57,25 @@ export const projects = [
   }
 ];
 
+export const slideshow = [
+  {
+    image: require("../images/gallery/#1_You_wake_up_in_a_forest.png"),
+    title: "You wake up in a forest..."
+  },
+  {
+    image: require("../images/gallery/Isometric_Coloring.png"),
+    title: "Watercolor"
+  },
+  {
+    image: require("../images/gallery/Witcher_Medal.png"),
+    title: "Witcher medal"
+  },
+  {
+    image: require("../images/gallery/#5_Need_Potion.png"),
+    title: "Need potion!"
+  }
+];
+
 export const skills = [
   {
     image: require("../images/skills/3dsmax.png"),
@@ -187,3 +206,4 @@ export const skills = [
     name: "VS Code"
   },
 ];
+

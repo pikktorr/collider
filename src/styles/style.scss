@@ -210,18 +210,16 @@ html {
 }
 
 // SLIDESHOW
-
 .slide-container {
   height: 100vh;
   scroll-snap-align: start;
   margin: auto;
   display: grid;
   grid-template-areas:
-    ". title ."
-    "image image image"
-    "caption caption caption";
-  grid-template-columns: 1fr 60rem 1fr;
-  grid-template-rows: 15vh 85vh;
+    "image"
+    "caption";
+  grid-template-columns: 1fr;
+  grid-template-rows:100vh;
   align-items: center;
   position: relative;
   background-color: $blue;
@@ -233,17 +231,16 @@ html {
   .slide-image {
     grid-area: image;
     justify-self: center;
-    width: 100%;
+    width: 1fr;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
     img {
-      position: absolute;
-      z-index: -1;
       height: 100%;
       width: 100%;
+      border-radius: 0.5rem;
       object-fit: contain;
     }
     .caption-container {
@@ -253,7 +250,6 @@ html {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(79, 145, 159, 0.5);
       padding: 10px 0;
       position: absolute;
       bottom: 0;

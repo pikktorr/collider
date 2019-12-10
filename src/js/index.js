@@ -63,23 +63,9 @@ projects.map((project, index) => {
   return projectList.appendChild(oneProject);
 });
 
-//GALLERY
+//AUTOMATIC SLIDESHOW
 
-const sectionTransition = () => {
-  const gallerySection = document.querySelector("#gallery-section");
-  const galleryTop = gallerySection.getBoundingClientRect().top;
-  console.log(gallerySection.getBoundingClientRect().top);
-  if (
-    galleryTop < window.innerHeight / 1.5 &&
-    galleryTop > -(window.innerHeight / 1.5)
-  ) {
-    gallerySection.classList.add("background");
-  } else {
-    gallerySection.classList.remove("background");
-  }
-};
 
-window.addEventListener("scroll", sectionTransition);
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
