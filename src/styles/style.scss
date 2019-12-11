@@ -219,24 +219,25 @@ html {
   align-items: center;
   position: relative;
   background-color: $blue;
-  transition: background 0.3s ease-in-out;
+
   .slide-title {
     @include titles();
     color: $white;
   }
   .slide-image {
     justify-self: center;
-    width: 1fr;
+    width: 80rem;
     height: 100%;
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
+    transition: all 1s ease-out;
     img {
-      height: 100%;
+      height:100%;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
       box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.5);
     }
   }

@@ -71,22 +71,16 @@ let slideIndex = 0;
 
 const showSlides = () => {
   const slides = document.querySelectorAll(".slide-image");
-  slides.forEach( (slide,index)=>{
-    slide.style.visibility = "hidden";
+  slides.forEach((slide, index) => {
+    slide.style.opacity = "0";
   });
-  slideIndex >= slides.length ? slideIndex = 0 : slideIndex;
-  slides[slideIndex].style.visibility = "visible";
+  slideIndex >= slides.length ? (slideIndex = 0) : slideIndex;
+  slides[slideIndex].style.opacity = "1";
   slideIndex++;
-  setTimeout(showSlides, 3000);
+  setTimeout(showSlides, 4000);
 };
 
 showSlides();
-
-
-
-
-
-
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
