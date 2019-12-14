@@ -9,20 +9,22 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Quicksand', sans-serif; 
+  font-weight: 400;   
   max-height: 100vh;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   /* background-color: $anthracite; NIGHT MODE BACKGROUND*/
   h1 {
     font-size: 2rem;
+    font-weight: 700;
   }
   h2 {
     line-height: 130%;
   }
   p {
-    font-family: "Montserrat", sans-serif;
     line-height: 170%;
+    font-size: 1.1rem;
   }
   hr {
     width: 40rem;
@@ -82,9 +84,8 @@ html {
     justify-content: flex-end;
     padding-right: 10%;
     width: 80%;
-    font-style: normal;
-    font-weight: normal;
     font-size: 1.2rem;
+    font-weight: 500;
     li {
       list-style-type: none;
       margin-left: 40px;
@@ -146,7 +147,7 @@ html {
   .about-paragraph {
     grid-area: paragraph;
     max-width: 90%;
-    line-height: 1.7rem;
+    // line-height: 1rem;
   }
   .about-profile {
     grid-area: profile;
@@ -154,7 +155,11 @@ html {
     height: 20em;
     margin: auto;
     border-radius: 50%;
-    box-shadow: $shadow;
+    // box-shadow: $shadow;
+    img{
+      width: 100%;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -189,13 +194,13 @@ html {
       gap: 2em;
       align-items: center;
       transition: all 0.3s ease-in-out;
-      border: 1px solid rgb(255, 255, 255);
+      border: 1px solid white;
+      border-radius: 0.1rem;
       cursor: pointer;
       &:hover {
         box-shadow: $shadow;
         transform: scale(1.01);
         border: 1px solid rgb(220, 220, 220);
-        border-radius: 0.1rem;
       }
       .project-image {
         grid-area: image;
@@ -212,6 +217,10 @@ html {
       .project-text {
         grid-area: text;
         margin-right: 3rem;
+      }
+      .project-tool{
+        font-size: 1rem;
+        font-weight: 300;
       }
     }
   }
@@ -234,9 +243,8 @@ html {
   }
   .slide-image {
     justify-self: center;
-    width: 70%;
-    height: 100%;
-    padding: 3rem;
+    width: 60%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,10 +254,37 @@ html {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: $shadow;
+      // box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.5);
       &:hover {
         cursor: pointer;
+
       }
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.5rem;
+      color: $white;
+      position: absolute;
+      top: -9%;
+    }
+  }
+  .dot-container{
+    justify-self: center;
+    position: absolute;
+    bottom: 4%;
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 2px;
+      background-color:$white;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active {
+      background-color: $blue;
     }
   }
 }

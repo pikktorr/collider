@@ -42,7 +42,6 @@ navToSections.map(element => {
 
 // PROJECTS
 const projectList = document.querySelector(".projectList");
-console.log(projectList);
 projects.map((project, index) => {
   const oneProject = document.createElement("article");
   oneProject.className = "project-container";
@@ -71,11 +70,15 @@ let slideIndex = 0;
 
 const showSlides = () => {
   const slides = document.querySelectorAll(".slide-image");
-  slides.forEach((slide, index) => {
-    slide.style.opacity = "0";
-  });
+  const dots = document.querySelectorAll(".dot");
+  slides.forEach(slide => (slide.style.opacity = "0"));
+
   slideIndex >= slides.length ? (slideIndex = 0) : slideIndex;
   slides[slideIndex].style.opacity = "1";
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[slideIndex].classList.add("active");
+
   slideIndex++;
   setTimeout(showSlides, 4000);
 };
