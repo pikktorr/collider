@@ -9,8 +9,8 @@
 }
 
 html {
-  font-family: 'Quicksand', sans-serif; 
-  font-weight: 400;   
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
   max-height: 100vh;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
@@ -156,7 +156,7 @@ html {
     margin: auto;
     border-radius: 50%;
     // box-shadow: $shadow;
-    img{
+    img {
       width: 100%;
       border-radius: 50%;
     }
@@ -218,7 +218,7 @@ html {
         grid-area: text;
         margin-right: 3rem;
       }
-      .project-tool{
+      .project-tool {
         font-size: 1rem;
         font-weight: 300;
       }
@@ -232,19 +232,24 @@ html {
   scroll-snap-align: start;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh;
+  grid-template-areas:
+    ". title ."
+    "image image image"
+    ". dots .";
+  grid-template-columns: 1fr 60rem 1fr;
+  grid-template-rows: 10vh 80vh 10vh;
   align-items: center;
   position: relative;
-  background-color: $anthracite;
+  // background-color: $anthracite;
   .slide-title {
     @include titles();
-    color: $white;
+    grid-area: title;
   }
   .slide-image {
+    grid-area: image;
     justify-self: center;
-    width: 60%;
-    height: 80%;
+    width: 60rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,32 +258,30 @@ html {
     img {
       height: 100%;
       width: 100%;
+      box-shadow: $shadow;
+      border-radius: 0.5rem;
       object-fit: cover;
-    box-shadow: $shadow;
-      // box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.5);
       &:hover {
         cursor: pointer;
-
       }
     }
     p {
+      display: none;
       font-size: 1rem;
       font-weight: 500;
       padding: 0.5rem;
-      color: $white;
       position: absolute;
       top: -9%;
     }
   }
-  .dot-container{
+  .dot-container {
+    grid-area: dots;
     justify-self: center;
-    position: absolute;
-    bottom: 4%;
     .dot {
       height: 12px;
       width: 12px;
       margin: 0 2px;
-      background-color:$white;
+      background-color: lightgrey;
       border-radius: 50%;
       display: inline-block;
       transition: background-color 0.6s ease;
@@ -288,6 +291,15 @@ html {
     }
   }
 }
+
+//GALLERY
+.modal-gallery {
+  background-color: $anthracite;
+  height: 100vh;
+  width: 100vw;
+}
+
+//SKILLS
 .skills-container {
   height: 100vh;
   width: 60rem;

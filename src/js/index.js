@@ -85,6 +85,11 @@ const showSlides = () => {
 
 showSlides();
 
+//GALLERY
+
+
+
+
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
 
