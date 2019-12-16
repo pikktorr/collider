@@ -1,5 +1,5 @@
 import { projects } from "./lists";
-import { slideshow } from "./lists";
+import { gallery } from "./lists";
 import { skills } from "./lists";
 
 //NAVIGATION - BACK TO TOP
@@ -28,7 +28,7 @@ const navToSections = [
   { nav: "#nav-home", section: "#home-section" },
   { nav: "#nav-about", section: "#about-section" },
   { nav: "#nav-projects", section: "#projects-section" },
-  { nav: "#nav-gallery", section: "#gallery-section" },
+  { nav: "#nav-slide", section: "#slide-section" },
   { nav: "#nav-skills", section: "#skills-section" },
   { nav: "#nav-contact", section: "#contact-section" }
 ];
@@ -64,10 +64,7 @@ projects.map((project, index) => {
 });
 
 //AUTOMATIC SLIDESHOW
-const gallerySection = document.querySelector(".slide-container");
-
 let slideIndex = 0;
-
 const showSlides = () => {
   const slides = document.querySelectorAll(".slide-image");
   const dots = document.querySelectorAll(".dot");
@@ -86,9 +83,8 @@ const showSlides = () => {
 showSlides();
 
 //GALLERY
-
-
-
+const galleryContainer = document.querySelector(".gallery-content");
+gallery.map((img, index) => {});
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
@@ -100,6 +96,5 @@ skills.map((skill, index) => {
   <div class="badge-img" title=${skill.name.replace(/\s/g, "")}>
     <img src=${skill.image}  alt=${skill.name.replace(/\s/g, "")} /></div>
   `;
-
   return skillsBadges.appendChild(badge);
 });

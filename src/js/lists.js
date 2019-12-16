@@ -57,7 +57,7 @@ export const projects = [
   }
 ];
 
-export const slideshow = [
+export const gallery = [
   {
     image: require("../images/gallery/Untitled_Artwork.png"),
     title: "You wake up in a forest..."
@@ -75,6 +75,8 @@ export const slideshow = [
     title: "Need potion!"
   }
 ];
+
+
 
 export const skills = [
   {

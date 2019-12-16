@@ -195,7 +195,7 @@ html {
       align-items: center;
       transition: all 0.3s ease-in-out;
       border: 1px solid white;
-      border-radius: 0.1rem;
+      border-radius: 0.5rem;
       cursor: pointer;
       &:hover {
         box-shadow: $shadow;
@@ -208,7 +208,7 @@ html {
         height: 20rem;
         img {
           object-fit: cover;
-          border-radius: 0.2rem;
+          border-radius: 0.5rem;
           width: 90%;
           height: 90%;
           margin: 5%;
@@ -248,7 +248,7 @@ html {
   .slide-image {
     grid-area: image;
     justify-self: center;
-    width: 60rem;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -374,5 +374,3 @@ html {
     text-align: center;
   }
 }
-
-@import "media-queries";
