@@ -84,7 +84,23 @@ showSlides();
 
 //GALLERY
 const galleryContainer = document.querySelector(".gallery-content");
-gallery.map((img, index) => {});
+const prevImg = document.querySelector(".prev-img");
+const nextImg = document.querySelector(".next-img");
+const galleryIndex = 1;
+
+const images = gallery.map((img, index) => {
+  const image = document.createElement("div");
+  image.className = "gallery-image";
+  image.innerHTML = `
+    <div class="img-index">${index + 1}/${gallery.length}</div>
+      <img src=${img.image}>
+    <div class="img-title">${img.title}</div>
+  `;
+  image.style.display = "none";
+  return galleryContainer.appendChild(image);
+});
+
+images[1].style.display = "block";
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
