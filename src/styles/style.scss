@@ -51,17 +51,16 @@ html {
   z-index: 99;
   transition: all 0.3s ease-in-out;
   opacity: 0.5;
+  transform: rotate(-90deg);
   &:hover {
     background-color: white;
     opacity: 1;
     box-shadow: $shadow;
     cursor: pointer;
   }
-  img {
-    // background-color: aqua;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0.6rem;
+  .top-button {
+    font-size: 2.8rem;
+    margin: 0.5rem;
   }
 }
 // NAVIGATION
@@ -227,76 +226,114 @@ html {
 }
 
 // SLIDESHOW
-.slide-container {
+.slide-section {
   height: 100vh;
   scroll-snap-align: start;
   margin: auto;
   display: grid;
   grid-template-areas:
     ". title ."
-    "image image image"
+    ". image ."
     ". dots .";
   grid-template-columns: 1fr 60rem 1fr;
   grid-template-rows: 10vh 80vh 10vh;
   align-items: center;
-  position: relative;
-  // background-color: $anthracite;
   .slide-title {
     @include titles();
     grid-area: title;
   }
-  .slide-image {
+  .slide-container {
     grid-area: image;
     justify-self: center;
-    width: 60%;
+    width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transition: all 1s ease-out;
-    img {
-      height: 100%;
-      width: 100%;
+    border-radius: 0.5rem;
+    position: relative;
+    transition: all 0.2s ease-out;
+    border: 1px solid white;
+    cursor: pointer;
+    &:hover {
       box-shadow: $shadow;
-      border-radius: 0.5rem;
-      object-fit: cover;
-      &:hover {
-        cursor: pointer;
-      }
+      border: 1px solid rgb(220, 220, 220);
     }
-    p {
-      display: none;
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 0.5rem;
+    img {
       position: absolute;
-      top: -9%;
-    }
-  }
-  .dot-container {
-    grid-area: dots;
-    justify-self: center;
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 2px;
-      background-color: lightgrey;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    .active {
-      background-color: $blue;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
     }
   }
 }
+.dot-container {
+  grid-area: dots;
+  justify-self: center;
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active {
+    background-color: $blue;
+  }
+}
 
-//GALLERY
-.modal-gallery {
-  background-color: $anthracite;
+// GALLERY
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
   height: 100vh;
   width: 100vw;
+  .gallery-image {
+    display: flex;
+    align-content: center;
+    height: 100vh;
+    width: auto;
+    img {
+      justify-self: center;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .img-index,
+    .img-title {
+      position: fixed;
+    }
+  }
+  .close-button,
+  .prev-img,
+  .next-img {
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    right: 0%;
+    top: 0%;
+    color: $white;
+    opacity: 0.5;
+    width: 6rem;
+    font-size: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .prev-img {
+    font-size: 2.5rem;
+    left: 0;
+    top: 50%;
+  }
+  .next-img {
+    font-size: 2.5rem;
+    right: 0;
+    top: 50%;
+  }
 }
 
 //SKILLS

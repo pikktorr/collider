@@ -11,7 +11,7 @@
   <body>
     <div class="app-container" id="home-section">
       <div class="back-to-top">
-        <img src="./icons/back-to-top.svg" alt="back to top arrow">
+        <a class="top-button">&#10095;</a>
       </div>
       <!-- NAVIGATION -->
       <nav class="nav-container">
@@ -80,23 +80,27 @@
         </div>
       </section>
       <!-- SLIDESHOW -->  
-      <section class="slide-container" id="slide-section">
+      <section class="slide-section" id="slide-section">
         <h1 class="slide-title">Gallery</h1>
-        <div class="slide-image">
-          <p>Need Potion!</p>
-          <img src="./images/gallery/Untitled_Artwork.png" alt="" />
-        </div>
-        <div class="slide-image">
-          <p>A Rainy Day</p>
-          <img src="./images/gallery/sketch-1.jpg" alt="" />
-        </div>
-        <div class="slide-image">
-          <p>Wolf Medallion from the Witcher</p>
-          <img src="./images/gallery/Witcher_Medal.png" alt="" />
-        </div>
-        <div class="slide-image">
-          <p>Watercolors</p>
-          <img src="./images/gallery/Isometric_Coloring.png" alt="" />
+        <div class="slide-container">
+          <img src="./images/gallery/Untitled_Artwork.png" />
+          <img src="./images/gallery/sketch-1.jpg" />
+          <img src="./images/gallery/Witcher_Medal.png" />
+          <img src="./images/gallery/Isometric_Coloring.png" />
+
+          <!-- <div class="slide-image">
+            <img src="./images/gallery/Untitled_Artwork.png" alt="" />
+          </div>
+          <div class="slide-image">
+            <img src="./images/gallery/sketch-1.jpg" alt="" />
+          </div>
+          <div class="slide-image">
+            <img src="./images/gallery/Witcher_Medal.png" alt="" />
+          </div>
+          <div class="slide-image">
+            <img src="./images/gallery/Isometric_Coloring.png" alt="" />
+          </div> -->
+
         </div>
         <div class="dot-container">
           <span class="dot"></span> 
@@ -106,7 +110,7 @@
         </div>
       </section>
       <!-- MODAL GALLERY -->
-      <section class="modal-container">
+      <section class="modal-container" style="display:none">
         <span class="close-button">&times;</span>
         <div class="gallery-content">
           <!-- Gallery images injected from Javascript -->
@@ -115,7 +119,6 @@
         <a class="prev-img">&#10094;</a>
         <a class="next-img">&#10095;</a>
       </section>
-
       <!-- SKILLS -->
       <section class="skills-container" id="skills-section">
         <h1 class="skills-title">Skills</h1>

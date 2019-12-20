@@ -63,12 +63,15 @@ projects.map((project, index) => {
   return projectList.appendChild(oneProject);
 });
 
-//AUTOMATIC SLIDESHOW
+// AUTOMATIC SLIDESHOW
 let slideIndex = 0;
+const slides = document.querySelectorAll(".slide-container>img");
+const dots = document.querySelectorAll(".dot");
+
 const showSlides = () => {
-  const slides = document.querySelectorAll(".slide-image");
-  const dots = document.querySelectorAll(".dot");
-  slides.forEach(slide => (slide.style.opacity = "0"));
+  slides.forEach(slide => {
+    slide.style.opacity = "0";
+  });
 
   slideIndex >= slides.length ? (slideIndex = 0) : slideIndex;
   slides[slideIndex].style.opacity = "1";
@@ -79,28 +82,29 @@ const showSlides = () => {
   slideIndex++;
   setTimeout(showSlides, 4000);
 };
-
 showSlides();
 
 //GALLERY
+const slide = document.querySelector(".slide-container");
 const galleryContainer = document.querySelector(".gallery-content");
+const modal = document.querySelector(".modal-container");
 const prevImg = document.querySelector(".prev-img");
 const nextImg = document.querySelector(".next-img");
-const galleryIndex = 1;
+let galleryIndex = 1;
+
+slide.addEventListener("click", () => modal.style.display = "block");
 
 const images = gallery.map((img, index) => {
   const image = document.createElement("div");
   image.className = "gallery-image";
   image.innerHTML = `
+    <img src=${img.image}>
     <div class="img-index">${index + 1}/${gallery.length}</div>
-      <img src=${img.image}>
     <div class="img-title">${img.title}</div>
   `;
   image.style.display = "none";
   return galleryContainer.appendChild(image);
 });
-
-images[1].style.display = "block";
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
