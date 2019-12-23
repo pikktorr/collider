@@ -262,8 +262,17 @@ html {
       height: 100%;
       object-fit: cover;
       border-radius: 0.5rem;
+      transition: all 0.2s ease-out;
     }
   }
+}
+.hidden-img {
+  opacity: 0;
+  visibility: hidden;
+}
+.active-img {
+  opacity: 1;
+  visibility: visible;
 }
 .dot-container {
   grid-area: dots;

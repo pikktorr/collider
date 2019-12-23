@@ -69,42 +69,84 @@ const slides = document.querySelectorAll(".slide-container>img");
 const dots = document.querySelectorAll(".dot");
 
 const showSlides = () => {
-  slides.forEach(slide => {
-    slide.style.opacity = "0";
+  slides.forEach((slide, index) => {
+    slide.classList.add("hidden-img");
   });
-
   slideIndex >= slides.length ? (slideIndex = 0) : slideIndex;
-  slides[slideIndex].style.opacity = "1";
+  slides.forEach(img => img.classList.remove("active-img"));
+  slides[slideIndex].classList.replace("hidden-img", "active-img");
 
   dots.forEach(dot => dot.classList.remove("active"));
   dots[slideIndex].classList.add("active");
 
   slideIndex++;
+  console.log(slideIndex);
   setTimeout(showSlides, 4000);
 };
 showSlides();
 
+slides.forEach((slide, index) =>
+  slide.addEventListener("click", () => {
+    showModal();
+    showImage(index);
+  })
+);
+
 //GALLERY
-const slide = document.querySelector(".slide-container");
 const galleryContainer = document.querySelector(".gallery-content");
 const modal = document.querySelector(".modal-container");
+const closeButton = document.querySelector(".close-button");
 const prevImg = document.querySelector(".prev-img");
 const nextImg = document.querySelector(".next-img");
 let galleryIndex = 1;
 
-slide.addEventListener("click", () => modal.style.display = "block");
-
 const images = gallery.map((img, index) => {
   const image = document.createElement("div");
-  image.className = "gallery-image";
+  image.className = "gallery-image active-img";
   image.innerHTML = `
-    <img src=${img.image}>
-    <div class="img-index">${index + 1}/${gallery.length}</div>
-    <div class="img-title">${img.title}</div>
+  <img src=${img.image}>
+  <div class="img-index">${index + 1}/${gallery.length}</div>
+  <div class="img-title">${img.title}</div>
   `;
-  image.style.display = "none";
-  return galleryContainer.appendChild(image);
+  return image;
+  // image.classList.add("hidden-img");
+  // return galleryContainer.appendChild(image);
 });
+// const images = gallery.map((img, index) => {
+//   const image = document.createElement("div");
+//   image.className = "gallery-image";
+//   image.innerHTML = `
+//   <img src=${img.image}>
+//   <div class="img-index">${index + 1}/${gallery.length}</div>
+//   <div class="img-title">${img.title}</div>
+//   `;
+//   image.classList.add("hidden-img");
+//   return galleryContainer.appendChild(image);
+// });
+
+const showModal = () => (modal.style.display = "block");
+const closeModal = () => {
+  modal.style.display = "none";
+  images.map(img => img.remove());
+};
+
+closeButton.addEventListener("click", closeModal);
+document.addEventListener("keydown", event => {
+  if (event.which === 27) closeModal();
+});
+
+const showImage = index => {
+  console.log(images[index]);
+  galleryContainer.appendChild(images[index]);
+};
+
+// const showImage = index => {
+//   images[index].classList.replace("hidden-img", "active-img");
+// };
+
+const currentImage = n => {
+  showImage((galleryIndex = n));
+};
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
