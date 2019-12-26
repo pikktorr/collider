@@ -20,7 +20,6 @@ const scrollPage = targetId => {
   const targetLeftPosition = target.getBoundingClientRect().left;
   const targetTopPosition = target.getBoundingClientRect().top;
   window.scrollTo(targetLeftPosition, targetTopPosition);
-  console.log(targetTopPosition);
   // without options, it works with Edge and Safari
 };
 
@@ -42,22 +41,19 @@ navToSections.map(element => {
 
 // PROJECTS
 const projectList = document.querySelector(".projectList");
-projects.map((project, index) => {
+projects.map(project => {
   const oneProject = document.createElement("article");
   oneProject.className = "project-container";
   oneProject.innerHTML = `
     <div class="project-image">
-                <img src=${project.image}  alt=${project.title.replace(
-    /\s/g,
-    ""
-  )} />
-              </div>
-              <div class="project-text">
-                <h2 class="project-title">${project.title}</h2>
-                <p class="project-tool">(${project.tool})</p>
-                <br />
-                <p>${project.about}</p>
-              </div>
+      <img src=${project.image}  alt=${project.title.replace(/\s/g, "")} />
+      </div>
+      <div class="project-text">
+        <h2 class="project-title">${project.title}</h2>
+        <p class="project-tool">(${project.tool})</p>
+        <br />
+        <p>${project.about}</p>
+      </div>
   `;
   oneProject.addEventListener("click", () => window.open(project.link));
   return projectList.appendChild(oneProject);
@@ -80,7 +76,6 @@ const showSlides = () => {
   dots[slideIndex].classList.add("active");
 
   slideIndex++;
-  console.log(slideIndex);
   setTimeout(showSlides, 4000);
 };
 showSlides();
@@ -88,7 +83,7 @@ showSlides();
 slides.forEach((slide, index) =>
   slide.addEventListener("click", () => {
     showModal();
-    showImage(index);
+    currentImage(index);
   })
 );
 
@@ -98,7 +93,7 @@ const modal = document.querySelector(".modal-container");
 const closeButton = document.querySelector(".close-button");
 const prevImg = document.querySelector(".prev-img");
 const nextImg = document.querySelector(".next-img");
-let galleryIndex = 1;
+let galleryIndex = 0;
 
 const images = gallery.map((img, index) => {
   const image = document.createElement("div");
@@ -109,20 +104,7 @@ const images = gallery.map((img, index) => {
   <div class="img-title">${img.title}</div>
   `;
   return image;
-  // image.classList.add("hidden-img");
-  // return galleryContainer.appendChild(image);
 });
-// const images = gallery.map((img, index) => {
-//   const image = document.createElement("div");
-//   image.className = "gallery-image";
-//   image.innerHTML = `
-//   <img src=${img.image}>
-//   <div class="img-index">${index + 1}/${gallery.length}</div>
-//   <div class="img-title">${img.title}</div>
-//   `;
-//   image.classList.add("hidden-img");
-//   return galleryContainer.appendChild(image);
-// });
 
 const showModal = () => (modal.style.display = "block");
 const closeModal = () => {
@@ -130,23 +112,39 @@ const closeModal = () => {
   images.map(img => img.remove());
 };
 
-closeButton.addEventListener("click", closeModal);
-document.addEventListener("keydown", event => {
-  if (event.which === 27) closeModal();
-});
-
-const showImage = index => {
-  console.log(images[index]);
-  galleryContainer.appendChild(images[index]);
-};
-
-// const showImage = index => {
-//   images[index].classList.replace("hidden-img", "active-img");
-// };
-
 const currentImage = n => {
   showImage((galleryIndex = n));
 };
+
+const showImage = n => {
+  images.map(img => img.remove());
+  if (n >= images.length) {
+    galleryIndex = 0;
+  }
+  if (n < 0) {
+    galleryIndex = images.length - 1;
+  }
+  galleryContainer.appendChild(images[galleryIndex]);
+};
+
+const plusImages = n => {
+  showImage((galleryIndex += n));
+};
+
+nextImg.addEventListener("click", () => plusImages(1));
+document.addEventListener("keydown", event => {
+  if (event.which === 39 && modal.style.display === "block") plusImages(1);
+});
+
+prevImg.addEventListener("click", () => plusImages(-1));
+document.addEventListener("keydown", event => {
+  if (event.which === 37 && modal.style.display === "block") plusImages(-1);
+});
+
+closeButton.addEventListener("click", closeModal);
+document.addEventListener("keydown", event => {
+  if (event.which === 27 && modal.style.display === "block") closeModal();
+});
 
 // SKILLS
 const skillsBadges = document.querySelector(".skills-badges");
@@ -160,3 +158,23 @@ skills.map((skill, index) => {
   `;
   return skillsBadges.appendChild(badge);
 });
+
+//CONTACT
+
+const email = document.querySelector(".email");
+const github = document.querySelector(".github");
+const linkedin = document.querySelector(".linkedin");
+const twitter = document.querySelector(".twitter");
+const instagram = document.querySelector(".instagram");
+
+const openLink = (name, url) => {
+  name.addEventListener("click", () => {
+    window.open(url, "_blank");
+  });
+};
+
+openLink(email, "mailto:viktor.rozgonyi@gmail.com");
+openLink(github, "https://github.com/pikktorr");
+openLink(linkedin, "https://www.linkedin.com/in/viktor-rozgonyi/");
+openLink(twitter, "https://twitter.com/pikktorr");
+openLink(instagram, "https://www.instagram.com/pikktorr/");

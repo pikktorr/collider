@@ -76,8 +76,6 @@ export const gallery = [
   }
 ];
 
-
-
 export const skills = [
   {
     image: require("../images/skills/3dsmax.png"),
@@ -103,10 +101,10 @@ export const skills = [
     image: require("../images/skills/cinema4d.jpg"),
     name: "Cinema 4D"
   },
-                  {
-                    image: require("../images/skills/commandline.png"),
-                    name: "Command Line"
-                  },
+  {
+    image: require("../images/skills/commandline.png"),
+    name: "Command Line"
+  },
   {
     image: require("../images/skills/css.png"),
     name: "CSS3"
@@ -129,7 +127,7 @@ export const skills = [
   },
   {
     image: require("../images/skills/google.png"),
-    name: "Google"
+    name: "HowToGoogleThings"
   },
   {
     image: require("../images/skills/heroku.png"),
@@ -206,6 +204,5 @@ export const skills = [
   {
     image: require("../images/skills/vscode.png"),
     name: "VS Code"
-  },
+  }
 ];
-

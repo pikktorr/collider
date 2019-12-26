@@ -52,8 +52,8 @@ html {
   transition: all 0.3s ease-in-out;
   opacity: 0.5;
   transform: rotate(-90deg);
+  background-color: white;
   &:hover {
-    background-color: white;
     opacity: 1;
     box-shadow: $shadow;
     cursor: pointer;
@@ -73,7 +73,7 @@ html {
   .nav-logo {
     grid-area: nav-logo;
     justify-self: start;
-    height: 60%;
+    height: 3.5rem;
     padding-left: 10%;
   }
   .nav-menu {
@@ -128,6 +128,14 @@ html {
 }
 
 // ABOUT
+.about-section {
+  height: 100vh;
+  width: 100%;
+  // background-color: $anthracite;
+  // * {
+  //   color: $white;
+  // }
+}
 .about-container {
   height: 100vh;
   width: 60rem;
@@ -150,11 +158,10 @@ html {
   }
   .about-profile {
     grid-area: profile;
-    width: 20em;
-    height: 20em;
+    width: 20rem;
+    height: 20rem;
     margin: auto;
     border-radius: 50%;
-    // box-shadow: $shadow;
     img {
       width: 100%;
       border-radius: 50%;
@@ -174,7 +181,7 @@ html {
     "title"
     "projectList";
   align-items: center;
-  margin-bottom: 15em;
+  margin-bottom: 5rem;
   .projectList-title {
     margin-top: 3rem;
     @include titles();
@@ -185,12 +192,12 @@ html {
     grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 2rem;
     .project-container {
       display: grid;
       grid-template-areas: "image text";
       grid-template-columns: 20rem 2fr;
-      gap: 2em;
+      gap: 2rem;
       align-items: center;
       transition: all 0.3s ease-in-out;
       border: 1px solid white;
@@ -250,11 +257,9 @@ html {
     border-radius: 0.5rem;
     position: relative;
     transition: all 0.2s ease-out;
-    border: 1px solid white;
     cursor: pointer;
     &:hover {
-      box-shadow: $shadow;
-      border: 1px solid rgb(220, 220, 220);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
     }
     img {
       position: absolute;
@@ -387,16 +392,27 @@ html {
   }
 }
 .contact-container {
-  height: 75vh;
+  height: 100vh;
   width: 100%;
   scroll-snap-align: start;
   display: grid;
   justify-content: center;
-  grid-template-rows: 3fr 1fr 1fr;
-  grid-template-columns: 20rem;
+  align-items: center;
+  grid-template-areas:
+    "profile"
+    "goodbye"
+    "icons"
+    "footer";
+  grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
+  grid-template-columns: 30rem;
+  background-color: $anthracite;
+  * {
+    color: $white;
+  }
   .contact-profile {
-    width: 13em;
-    height: 13em;
+    grid-area: profile;
+    width: 13rem;
+    height: 13rem;
     margin: auto;
     border-radius: 50%;
     img {
@@ -404,9 +420,19 @@ html {
       border-radius: 50%;
     }
   }
+  .contact-goodbye {
+    grid-area: goodbye;
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
   .contact-icons {
+    grid-area: icons;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 20rem;
+    margin: auto;
     .icon {
       text-align: center;
       height: 3rem;
@@ -414,9 +440,25 @@ html {
       border-radius: 50%;
       font-size: 40px;
       cursor: pointer;
+      &:hover {
+        * {
+          transition: all 0.2s ease-in-out;
+          color: $blue;
+        }
+      }
     }
   }
+  .contact-footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-logo {
+    height: 3rem;
+  }
   .contact-paragraph {
-    text-align: center;
+    font-size: 1rem;
+    height: 2rem;
   }
 }
