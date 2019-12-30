@@ -38,41 +38,109 @@ export const projects = [
     image: require("../images/projects/ux_ui_small.png"),
     link:
       "https://xd.adobe.com/view/f7600bf5-e88a-4c24-4472-e9ecc2d04c0c-8151/?fullscreen"
-  },
-  {
-    title: "Musical Instruments Workshop",
-    tool: "ArchiCAD, Photoshop, Sketchup, 3ds Max",
-    about:
-      "Architectural Engineering Degree project: Stringed musical instruments workshop in Pécs.",
-    image: require("../images/projects/workshop_small2.jpg"),
-    link: ""
-  },
-  {
-    title: "Outdoor Stage in Szeged",
-    tool: "ArchiCAD, Photoshop, InDesign, Illustrator",
-    about:
-      "Master Architecture Degree project: Outdoor Stage in Liget park, Szeged.",
-    image: require("../images/projects/stage_small.jpg"),
-    link: ""
   }
 ];
 
 export const gallery = [
   {
-    image: require("../images/gallery/Untitled_Artwork.png"),
-    title: "You wake up in a forest..."
+    image: require("../images/gallery/msc-1.png"),
+    title: "Outdoor Stage in Szeged",
+    about: "Master Architecture Degree project"
   },
   {
-    image: require("../images/gallery/Isometric_Coloring.png"),
-    title: "Watercolor"
+    image: require("../images/gallery/msc-2.png"),
+    title: "Installation in the Liget Park",
+    about: "Master Architecture Degree Project"
   },
   {
-    image: require("../images/gallery/Witcher_Medal.png"),
-    title: "Witcher medal"
+    image: require("../images/gallery/msc-3.png"),
+    title: "Floor Plans and Detailed Section",
+    about: "Master Architecture Degree Project"
   },
   {
-    image: require("../images/gallery/IMG_0093.png"),
-    title: "Need potion!"
+    image: require("../images/gallery/msc-4.png"),
+    title: "Sections and Facades",
+    about: "Master Architecture Degree Project"
+  },
+  {
+    image: require("../images/gallery/msc-5.png"),
+    title: "Day/Night Visuals",
+    about: "Master Architecture Degree Project"
+  },
+  {
+    image: require("../images/gallery/bsc-1.jpg"),
+    title: "Musical Instruments Workshop in Pécs",
+    about: "Architectural Engineering Degree Project"
+  },
+  {
+    image: require("../images/gallery/bsc-2.jpg"),
+    title: "Street View of the Workshop",
+    about: "Architectural Engineering Degree Project"
+  },
+  {
+    image: require("../images/gallery/bsc-3.jpg"),
+    title: "Floor Plans and Sections",
+    about: "Architectural Engineering Degree Project"
+  },
+  {
+    image: require("../images/gallery/bsc-4.jpg"),
+    title: "The Show-Window from the Street",
+    about: "Architectural Engineering Degree Project"
+  },
+  {
+    image: require("../images/gallery/bsc-5.jpg"),
+    title: "Inner Showroom ",
+    about: "Architectural Engineering Degree Project"
+  },
+  {
+    image: require("../images/gallery/digital-1.png"),
+    title: "Wolf Medallion from The Witcher",
+    about: "Digital Art"
+  },
+  {
+    image: require("../images/gallery/digital-2.png"),
+    title: "Need Potion",
+    about: "Digital Art"
+  },
+  {
+    image: require("../images/gallery/digital-3.jpg"),
+    title: "Messing with Watercolour",
+    about: "Digital Art"
+  },
+  {
+    image: require("../images/gallery/digital-4.png"),
+    title: "Oh Deer!",
+    about: "Digital Art"
+  },
+  {
+    image: require("../images/gallery/digital-5.png"),
+    title: "Concrete Forest",
+    about: "Digital Art"
+  },
+  {
+    image: require("../images/gallery/sketch-1.png"),
+    title: "By the Lake",
+    about: "Sketches"
+  },
+  {
+    image: require("../images/gallery/sketch-2.png"),
+    title: "Backend Firewalls",
+    about: "Sketches"
+  },
+  {
+    image: require("../images/gallery/sketch-3.png"),
+    title: "Móra Ferenc Museum, Szeged",
+    about: "Sketches"
+  },
+  {
+    image: require("../images/gallery/sketch-4.png"),
+    title: "Anna-Well, Szeged",
+    about: "Sketches"
+  },
+  {
+    image: require("../images/gallery/sketch-5.png"),
+    title: "It's a Tree",
+    about: "Sketches"
   }
 ];
 

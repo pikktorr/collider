@@ -1,9 +1,9 @@
-$blue: rgba(79, 145, 159, 1);
-$lightblue: rgba(188, 225, 234, 1);
+$blue: rgb(40, 100, 120);
+$lightblue: rgb(100, 190, 190);
 $white: rgb(240, 240, 240);
-$anthracite: rgb(74, 80, 84);
-$shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.1) /* , 0px 5px 0px $lightblue */;
-$blueShadow: 0px 10px 20px $lightblue;
+$anthracite: #252525;
+$shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.1) /* , 0px 5px 0px $lightblue */;
+$blueShadow: $shadow, 0px 8px 0 $lightblue;
 
 @mixin placeholdercard($color, $width, $height) {
   background-color: $color;

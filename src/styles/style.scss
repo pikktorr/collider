@@ -53,14 +53,15 @@ html {
   opacity: 0.5;
   transform: rotate(-90deg);
   background-color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  .top-button {
+    font-size: 2.7rem;
+    margin: 0.4rem;
+  }
   &:hover {
     opacity: 1;
-    box-shadow: $shadow;
-    cursor: pointer;
-  }
-  .top-button {
-    font-size: 2.8rem;
-    margin: 0.5rem;
+    box-shadow: -5px 0px 20px 5px rgba(0, 0, 0, 0.1), -5px 0px 0 $lightblue;
   }
 }
 // NAVIGATION
@@ -89,9 +90,9 @@ html {
       list-style-type: none;
       margin-left: 40px;
       cursor: pointer;
-      border-bottom: 3px solid rgba(255, 255, 255, 0);
+      border-bottom: 4px solid rgba(255, 255, 255, 0);
       &:hover {
-        border-bottom: 3px solid $lightblue;
+        border-bottom: 4px solid $lightblue;
         transition: all 0.2s ease-in-out;
       }
     }
@@ -106,11 +107,12 @@ html {
   grid-template-areas: "bg-logo";
   height: 90vh;
   overflow: hidden;
+  padding-bottom: 2rem;
   img.bg-logo {
     grid-area: bg-logo;
     border-radius: 50%;
-    height: 90%;
-    width: 90%;
+    height: 85%;
+    width: 85%;
     margin: auto;
     animation: roll 10s infinite linear;
   }
@@ -131,10 +133,16 @@ html {
 .about-section {
   height: 100vh;
   width: 100%;
-  // background-color: $anthracite;
-  // * {
-  //   color: $white;
-  // }
+  background-color: $anthracite;
+  transition: all 0.5s ease-in-out;
+  h2 {
+    color: $lightblue;
+  }
+  h1,
+  p,
+  i {
+    color: $white;
+  }
 }
 .about-container {
   height: 100vh;
@@ -154,7 +162,6 @@ html {
   .about-paragraph {
     grid-area: paragraph;
     max-width: 90%;
-    // line-height: 1rem;
   }
   .about-profile {
     grid-area: profile;
@@ -163,8 +170,10 @@ html {
     margin: auto;
     border-radius: 50%;
     img {
-      width: 100%;
+      width: inherit;
       border-radius: 50%;
+      box-shadow: 5px 10px 0 $lightblue;
+      border: none;
     }
   }
 }
@@ -200,13 +209,13 @@ html {
       gap: 2rem;
       align-items: center;
       transition: all 0.3s ease-in-out;
-      border: 1px solid white;
+      // border: 2px solid white;
       border-radius: 0.5rem;
       cursor: pointer;
       &:hover {
-        box-shadow: $shadow;
+        box-shadow: $blueShadow;
         transform: scale(1.01);
-        border: 1px solid rgb(220, 220, 220);
+        // border: 2px solid $lightblue;
       }
       .project-image {
         grid-area: image;
@@ -240,7 +249,7 @@ html {
   display: grid;
   grid-template-areas:
     ". title ."
-    ". image ."
+    "image image image"
     ". dots .";
   grid-template-columns: 1fr 60rem 1fr;
   grid-template-rows: 10vh 80vh 10vh;
@@ -252,14 +261,16 @@ html {
   .slide-container {
     grid-area: image;
     justify-self: center;
-    width: 100%;
+    width: 75%;
     height: 100%;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     position: relative;
     transition: all 0.2s ease-out;
+    border: 5px solid white;
     cursor: pointer;
     &:hover {
-      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      border: 5px solid $lightblue;
+      box-shadow: 0px 10px 0px $lightblue;
     }
     img {
       position: absolute;
@@ -298,7 +309,7 @@ html {
 
 // GALLERY
 .modal-container {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(37, 37, 37);
   position: fixed;
   z-index: 100;
   left: 0;
@@ -306,19 +317,37 @@ html {
   height: 100vh;
   width: 100vw;
   .gallery-image {
-    display: flex;
-    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10%;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    width: auto;
+    width: 100%;
     img {
+      grid-area: 1 / 1 / 2 / 2;
       justify-self: center;
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
-    .img-index,
-    .img-title {
-      position: fixed;
+    .img-caption {
+      grid-area: 2 / 1 / 3 / 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 5px 0;
+      p {
+        color: $white;
+        font-size: 0.85rem;
+      }
+      h3 {
+        color: $lightblue;
+        font-size: 0.85rem;
+      }
     }
   }
   .close-button,
@@ -335,6 +364,7 @@ html {
     text-align: center;
     cursor: pointer;
     &:hover {
+      color: $lightblue;
       opacity: 1;
     }
   }
@@ -391,6 +421,8 @@ html {
     }
   }
 }
+
+//CONTACT
 .contact-container {
   height: 100vh;
   width: 100%;
@@ -406,6 +438,7 @@ html {
   grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
   grid-template-columns: 30rem;
   background-color: $anthracite;
+  transition: all 0.5s ease-in-out;
   * {
     color: $white;
   }
@@ -443,7 +476,7 @@ html {
       &:hover {
         * {
           transition: all 0.2s ease-in-out;
-          color: $blue;
+          color: $lightblue;
         }
       }
     }

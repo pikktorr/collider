@@ -39,6 +39,24 @@ navToSections.map(element => {
   });
 });
 
+//ABOUT
+const aboutTransition = () => {
+  const aboutSection = document.querySelector("#about-section");
+  const aboutTop = aboutSection.getBoundingClientRect().top;
+  if (
+    aboutTop < window.innerHeight / 2 &&
+    aboutTop > -(window.innerHeight / 2)
+  ) {
+    aboutSection.style.opacity = "1";
+    // aboutSection.style.backgroundColor = "#252525";
+  } else {
+    aboutSection.style.opacity = "0";
+    // aboutSection.style.backgroundColor = "white";
+  }
+};
+
+window.addEventListener("scroll", aboutTransition);
+
 // PROJECTS
 const projectList = document.querySelector(".projectList");
 projects.map(project => {
@@ -83,7 +101,21 @@ showSlides();
 slides.forEach((slide, index) =>
   slide.addEventListener("click", () => {
     showModal();
-    currentImage(index);
+    switch (index) {
+      case 0:
+        currentImage(0);
+        break;
+      case 1:
+        currentImage(5);
+        break;
+      case 2:
+        currentImage(10);
+        break;
+
+      default:
+        currentImage(0);
+    }
+    // currentImage(index);
   })
 );
 
@@ -100,16 +132,26 @@ const images = gallery.map((img, index) => {
   image.className = "gallery-image active-img";
   image.innerHTML = `
   <img src=${img.image}>
-  <div class="img-index">${index + 1}/${gallery.length}</div>
-  <div class="img-title">${img.title}</div>
-  `;
+  <div class="img-caption">
+    <p>${index + 1}/${gallery.length}</p>
+    <h3 class="img-title">${img.title}</h3>
+    <p>${img.about}</p>
+    </div>
+    `;
   return image;
 });
 
-const showModal = () => (modal.style.display = "block");
+const showModal = () => {
+  modal.style.display = "block";
+  console.log(images[0].firstElementChild);
+  document.body.style.overflowY = "hidden";
+  // fixedBody();
+};
+
 const closeModal = () => {
   modal.style.display = "none";
   images.map(img => img.remove());
+  document.body.style.overflowY = "";
 };
 
 const currentImage = n => {
@@ -118,6 +160,7 @@ const currentImage = n => {
 
 const showImage = n => {
   images.map(img => img.remove());
+
   if (n >= images.length) {
     galleryIndex = 0;
   }
@@ -160,6 +203,18 @@ skills.map((skill, index) => {
 });
 
 //CONTACT
+const contactTransition = () => {
+  const contactSection = document.querySelector("#contact-section");
+  const contactTop = contactSection.getBoundingClientRect().top;
+  if (contactTop < window.innerHeight / 2) {
+    contactSection.style.opacity = "1";
+    // aboutSection.style.backgroundColor = "#252525";
+  } else {
+    contactSection.style.opacity = "0";
+  }
+};
+
+window.addEventListener("scroll", contactTransition);
 
 const email = document.querySelector(".email");
 const github = document.querySelector(".github");
