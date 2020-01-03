@@ -153,10 +153,10 @@ export const skills = [
     image: require("../images/skills/adobexd.png"),
     name: "Adobe Xd"
   },
-  {
-    image: require("../images/skills/affinityphoto.png"),
-    name: "Affinity Photo"
-  },
+  // {
+  //   image: require("../images/skills/affinityphoto.png"),
+  //   name: "Affinity Photo"
+  // },
   {
     image: require("../images/skills/Archicad.png"),
     name: "ArchiCAD"
@@ -245,10 +245,10 @@ export const skills = [
     image: require("../images/skills/postman.png"),
     name: "Postman"
   },
-  {
-    image: require("../images/skills/Prettier.png"),
-    name: "Prettier"
-  },
+  // {
+  //   image: require("../images/skills/Prettier.png"),
+  //   name: "Prettier"
+  // },
   {
     image: require("../images/skills/Procreate.png"),
     name: "Procreate"

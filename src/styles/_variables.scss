@@ -1,9 +1,17 @@
-$blue: rgb(40, 100, 120);
-$lightblue: rgb(100, 190, 190);
+$blue: rgb(88, 141, 156);
+// $blue: rgb(58, 113, 140);
+// $blue: rgb(70, 160, 160);
+$blue-o: rgba(88, 141, 156, 0.3);
+$lightblue: rgb(115, 177, 193);
+$lightblue2: rgb(188, 225, 234);
+// $lightblue: rgb(100, 190, 190);
+$lightblue-o: rgba(115, 177, 193, 0.3);
 $white: rgb(240, 240, 240);
-$anthracite: #252525;
-$shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.1) /* , 0px 5px 0px $lightblue */;
-$blueShadow: $shadow, 0px 8px 0 $lightblue;
+$anthracite: rgb(37, 37, 37);
+$anthracite-o: rgba(37, 37, 37, 0.3);
+$shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
+$whiteShadow: 0px 10px 20px 5px rgba(255, 255, 255, 0.2);
+$blueShadow: $shadow, 0px 8px 5px $blue-o;
 
 @mixin placeholdercard($color, $width, $height) {
   background-color: $color;

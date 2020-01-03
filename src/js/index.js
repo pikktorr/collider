@@ -3,16 +3,49 @@ import { gallery } from "./lists";
 import { skills } from "./lists";
 
 //NAVIGATION - BACK TO TOP
-
 const topButton = document.querySelector(".back-to-top");
 const scrollFunction = () => {
-  document.body.scrollTop > 200 || document.documentElement.scrollTop > 200
+  document.body.scrollTop > 600 || document.documentElement.scrollTop > 600
     ? (topButton.style.visibility = "visible")
     : (topButton.style.visibility = "hidden");
 };
 window.onscroll = () => scrollFunction();
 
 topButton.onclick = () => window.scrollTo(0, 0);
+
+// MOBILE MENU
+const heroLogo = document.querySelector(".bg-logo");
+const navContainer = document.querySelector(".nav-container");
+const navBackground = document.querySelector(".nav-background");
+const menu = document.querySelector(".nav-menu");
+const navCloseButton = document.querySelector(".menu-close");
+
+const openMenu = () => {
+  navContainer.style.display = "grid";
+  setTimeout(() => {
+    navBackground.classList.add("menu-open");
+  }, 10);
+  setTimeout(() => {
+    heroLogo.style.display = "none";
+  }, 100);
+  setTimeout(() => {
+    menu.style.display = "flex";
+  }, 300);
+};
+
+const closeMenu = () => {
+  menu.style.display = "none";
+  navBackground.classList.remove("menu-open");
+  setTimeout(() => {
+    heroLogo.style.display = "flex";
+  }, 200);
+  setTimeout(() => {
+    navContainer.style.display = "none";
+  }, 300);
+};
+
+heroLogo.addEventListener("click", () => openMenu());
+navCloseButton.addEventListener("click", () => closeMenu());
 
 // NAVIGATION - SCROLL
 const scrollPage = targetId => {
@@ -36,26 +69,20 @@ navToSections.map(element => {
   const navButton = document.querySelector(element.nav);
   navButton.addEventListener("click", () => {
     scrollPage(element.section);
+    closeMenu();
   });
 });
 
 //ABOUT
-const aboutTransition = () => {
-  const aboutSection = document.querySelector("#about-section");
-  const aboutTop = aboutSection.getBoundingClientRect().top;
-  if (
-    aboutTop < window.innerHeight / 2 &&
-    aboutTop > -(window.innerHeight / 2)
-  ) {
-    aboutSection.style.opacity = "1";
-    // aboutSection.style.backgroundColor = "#252525";
-  } else {
-    aboutSection.style.opacity = "0";
-    // aboutSection.style.backgroundColor = "white";
-  }
-};
+// const aboutTransition = () => {
+//   const aboutSection = document.querySelector("#about-section");
+//   const aboutTop = aboutSection.getBoundingClientRect().top;
+//   aboutTop < window.innerHeight / 2 && aboutTop > -(window.innerHeight / 2)
+//     ? (aboutSection.style.opacity = "1")
+//     : (aboutSection.style.opacity = "0");
+// };
 
-window.addEventListener("scroll", aboutTransition);
+// window.addEventListener("scroll", aboutTransition);
 
 // PROJECTS
 const projectList = document.querySelector(".projectList");
@@ -69,7 +96,7 @@ projects.map(project => {
       <div class="project-text">
         <h2 class="project-title">${project.title}</h2>
         <p class="project-tool">(${project.tool})</p>
-        <br />
+        <hr />
         <p>${project.about}</p>
       </div>
   `;
@@ -111,11 +138,9 @@ slides.forEach((slide, index) =>
       case 2:
         currentImage(10);
         break;
-
       default:
         currentImage(0);
     }
-    // currentImage(index);
   })
 );
 
@@ -203,18 +228,15 @@ skills.map((skill, index) => {
 });
 
 //CONTACT
-const contactTransition = () => {
-  const contactSection = document.querySelector("#contact-section");
-  const contactTop = contactSection.getBoundingClientRect().top;
-  if (contactTop < window.innerHeight / 2) {
-    contactSection.style.opacity = "1";
-    // aboutSection.style.backgroundColor = "#252525";
-  } else {
-    contactSection.style.opacity = "0";
-  }
-};
+// const contactTransition = () => {
+//   const contactSection = document.querySelector("#contact-section");
+//   const contactTop = contactSection.getBoundingClientRect().top;
+//   contactTop < window.innerHeight / 2
+//     ? (contactSection.style.opacity = "1")
+//     : (contactSection.style.opacity = "0");
+// };
 
-window.addEventListener("scroll", contactTransition);
+// window.addEventListener("scroll", contactTransition);
 
 const email = document.querySelector(".email");
 const github = document.querySelector(".github");
