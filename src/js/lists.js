@@ -26,7 +26,7 @@ export const projects = [
     title: "The Shopping List",
     tool: "JavaScript",
     about:
-      "A simple, mandatory shopping list with random colored item backgrounds. Everything we need!",
+      "A simple, mandatory shopping list with random colored item backgrounds. Everything you need!",
     image: require("../images/projects/shopping_small.jpg"),
     link: "https://pikktorr.github.io/shopping-list.github.io/"
   },

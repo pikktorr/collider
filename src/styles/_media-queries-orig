@@ -1,13 +1,11 @@
 /* MEDIA-QUERIES */
 
-/* -- MOBILE -- */
-@media (min-width: 320px) and (max-width: 479px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: $anthracite;
-  }
+/*
+Device = Low Resolution Tablets, Mobiles (Landscape)
+Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) {
+  
 
   html {
     font-family: "Quicksand", sans-serif;

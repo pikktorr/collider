@@ -2,6 +2,10 @@ import { projects } from "./lists";
 import { gallery } from "./lists";
 import { skills } from "./lists";
 
+/* PAGE EVENTS */
+
+window.addEventListener("orientationchange", () => location.reload());
+
 //NAVIGATION - BACK TO TOP
 const topButton = document.querySelector(".back-to-top");
 const scrollFunction = () => {
@@ -10,7 +14,6 @@ const scrollFunction = () => {
     : (topButton.style.visibility = "hidden");
 };
 window.onscroll = () => scrollFunction();
-
 topButton.onclick = () => window.scrollTo(0, 0);
 
 // MOBILE MENU
@@ -44,7 +47,9 @@ const closeMenu = () => {
   }, 300);
 };
 
-heroLogo.addEventListener("click", () => openMenu());
+heroLogo.addEventListener("click", () => {
+  if (window.innerWidth < window.innerHeight) openMenu();
+});
 navCloseButton.addEventListener("click", () => closeMenu());
 
 // NAVIGATION - SCROLL
@@ -69,7 +74,7 @@ navToSections.map(element => {
   const navButton = document.querySelector(element.nav);
   navButton.addEventListener("click", () => {
     scrollPage(element.section);
-    closeMenu();
+    if (window.innerWidth < window.innerHeight) closeMenu();
   });
 });
 
@@ -168,7 +173,6 @@ const images = gallery.map((img, index) => {
 
 const showModal = () => {
   modal.style.display = "block";
-  console.log(images[0].firstElementChild);
   document.body.style.overflowY = "hidden";
   // fixedBody();
 };
