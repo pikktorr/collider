@@ -39,6 +39,16 @@ export const projects = [
     link:
       "https://xd.adobe.com/view/f7600bf5-e88a-4c24-4472-e9ecc2d04c0c-8151/?fullscreen"
   }
+  ,
+  {
+    title: "Can't do it all",
+    tool: "Javascript",
+    about:
+      "One have to choose between coding, social life and sleeping. Can't do it all...",
+    image: "",
+    link:
+      " "
+  }
 ];
 
 export const gallery = [

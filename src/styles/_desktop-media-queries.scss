@@ -1,0 +1,213 @@
+/* MEDIA-QUERIES */
+
+@import "variables";
+
+/*
+
+Device = Laptops, Desktops
+Screen = B/w 1025px to 1366px
+*/
+
+@media (min-width: 1025px) {
+  /* HOME SECTION */
+  #home-section {
+    .nav-container {
+      grid: "nav-logo nav-menu" / 1fr 1fr;
+      height: 10vh;
+      .nav-logo {
+        justify-self: start;
+        transform: scale(0.8);
+        margin-left: 5%;
+      }
+      .nav-menu {
+        margin-right: 5%;
+        li {
+          font-size: 1.2rem;
+          border-bottom: 3px solid rgba(255, 255, 255, 0);
+          transition: all 0.2s ease-out;
+          &:hover {
+            border-bottom: 3px solid $lightblue;
+          }
+        }
+      }
+    }
+
+    /* BACKGROUND */
+    .bg-container {
+      height: 90vh;
+      svg.bg-logo {
+        :nth-child(1) {
+          stroke-width: 10;
+        }
+        :nth-child(2) {
+          stroke-width: 6;
+        }
+        :nth-child(3) {
+          stroke-width: 12;
+        }
+      }
+
+      @keyframes roll {
+        0% {
+          transform: rotate(0) scale(1);
+          box-shadow: 0 0 80px 20px $lightblue-o;
+          stroke-width: 12;
+        }
+        50% {
+          transform: rotate(180deg) scale(1.1);
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+          box-shadow: 0 0 80px 20px $lightblue-o;
+        }
+      }
+    }
+  }
+
+  /* ABOUT SECTION */
+  #about-section {
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    i {
+      font-size: 1rem;
+    }
+    display: flex;
+    justify-content: center;
+    background-color: $anthracite;
+    .about-container {
+      grid:
+        "title ." 10%
+        "paragraph profile" 90% / 1fr 0.5fr;
+      width: 50rem;
+      background-color: $anthracite;
+      padding: 0;
+      .about-title {
+        margin-top: 5rem;
+      }
+      .about-profile {
+        width: 45vh;
+        height: 45vh;
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  /* PROJECTS SECTION */
+  #projects-section {
+    h2 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin-bottom: 3rem;
+    .projectList-title {
+      margin-top: 2rem;
+    }
+    .projectList {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      width: 50rem;
+      gap: 3rem;
+      .project-container {
+        box-shadow: none;
+        border: 1px solid $white;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+        &:hover {
+          box-shadow: $shadow;
+          transform: scale(1.005);
+          border: 1px solid $white;
+        }
+      }
+    }
+  }
+
+  /* SLIDE SECTION */
+  #slide-section {
+    grid:
+      ". title ." 10%
+      "image image image" 80%
+      ". dots ." 10% / 1fr 50rem 1fr;
+
+    padding: 0;
+    .slide-container {
+      width: 60rem;
+    }
+    .dot-container {
+      align-self: center;
+    }
+  }
+
+  /* GALLERY SECTION */
+  .modal-container {
+    .gallery-image {
+      grid:
+        "image" 1fr
+        "text" 10% / 1fr;
+      .img-caption {
+        p {
+          font-size: 0.9rem;
+        }
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  /* SKILLS SECTION */
+  .skills-container {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "badges";
+    grid-template-rows: 10% 90%;
+    padding: 0;
+    justify-content: center;
+    .skills-title {
+      align-self: center;
+    }
+    .skills-badges {
+      width: 50rem;
+      gap: 2rem;
+      grid-template-rows: repeat(5, 100px);
+      .badge > img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
+  /* CONTACT SECTION */
+  .contact-container {
+    grid:
+      "goodbye profile" 1fr
+      "icons profile" 0.5fr
+      "footer profile" 0.5fr / 1fr 1fr;
+    height: 100vh;
+    padding: 10%;
+    border-radius: 0;
+    .contact-profile {
+      img {
+        margin-left: 3rem;
+        width: 50vh;
+      }
+    }
+    .contact-goodbye {
+      width: 100%;
+      padding: 0;
+      p {
+        font-size: 1.3rem;
+      }
+    }
+    .contact-icons {
+      width: 90%;
+    }
+  }
+}

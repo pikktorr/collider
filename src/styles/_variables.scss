@@ -7,9 +7,9 @@ $lightblue2: rgb(188, 225, 234);
 // $lightblue: rgb(100, 190, 190);
 $lightblue-o: rgba(115, 177, 193, 0.3);
 $white: rgb(240, 240, 240);
-$anthracite: rgb(37, 37, 37);
-$anthracite-o: rgba(37, 37, 37, 0.3);
-$shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.2);
+$anthracite: rgb(35, 35, 35);
+$anthracite-o: rgba(35, 35, 35, 0.3);
+$shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
 $whiteShadow: 0px 10px 20px 5px rgba(255, 255, 255, 0.2);
 $blueShadow: $shadow, 0px 8px 5px $blue-o;
 
@@ -23,6 +23,6 @@ $blueShadow: $shadow, 0px 8px 5px $blue-o;
 
 @mixin titles {
   grid-area: title;
-  text-decoration: underline;
-  text-decoration-color: rgba(188, 225, 234, 1);
+  // text-decoration: underline;
+  // text-decoration-color: $blue;
 }

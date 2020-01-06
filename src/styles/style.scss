@@ -233,8 +233,7 @@ Screen = 320px to 480px
         grid-template-areas:
           "image"
           "text";
-        grid-template-rows: 1fr 100%;
-        transition: all 0.3s ease-in-out;
+        grid-template-rows: 1fr 40%;
         border: 0px solid $lightblue;
         box-shadow: $shadow;
         border-radius: 0.5rem;
@@ -419,7 +418,6 @@ Screen = 320px to 480px
     .skills-badges {
       grid-area: badges;
       @include placeholdercard(white, 100%, 100%);
-      justify-self: center;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
       gap: 1rem;
@@ -515,3 +513,4 @@ Screen = 320px to 480px
 }
 
 @import "tab-media-queries";
+@import "desktop-media-queries";
