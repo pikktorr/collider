@@ -348,10 +348,12 @@ Screen = B/w 768px to 1024px
 
   /* SKILLS SECTION */
   .skills-container {
+    grid-template-rows: 10% 90%;
     padding: 5%;
     .skills-badges {
       width: 90%;
-      grid-template-columns: repeat(auto-fiLL, minmax(80px, 1fr));
+      gap: 1rem;
+      grid-template-rows: repeat(auto-fill, minmax(90px, 1fr));
     }
   }
 

@@ -3,12 +3,16 @@
 @import "variables";
 
 /*
-
 Device = Laptops, Desktops
 Screen = B/w 1025px to 1366px
 */
 
 @media (min-width: 1025px) {
+  /* BACK TO TOP BUTTON */
+  .back-to-top {
+    right: 2%;
+  }
+
   /* HOME SECTION */
   #home-section {
     .nav-container {
@@ -50,7 +54,7 @@ Screen = B/w 1025px to 1366px
       @keyframes roll {
         0% {
           transform: rotate(0) scale(1);
-          box-shadow: 0 0 80px 20px $lightblue-o;
+          box-shadow: 0 0 50px 20px $lightblue-o;
           stroke-width: 12;
         }
         50% {
@@ -58,7 +62,7 @@ Screen = B/w 1025px to 1366px
         }
         100% {
           transform: rotate(360deg) scale(1);
-          box-shadow: 0 0 80px 20px $lightblue-o;
+          box-shadow: 0 0 50px 20px $lightblue-o;
         }
       }
     }
@@ -77,21 +81,24 @@ Screen = B/w 1025px to 1366px
     }
     display: flex;
     justify-content: center;
+    background-color: white;
+    padding: 0;
     background-color: $anthracite;
     .about-container {
       grid:
-        "title ." 10%
-        "paragraph profile" 90% / 1fr 0.5fr;
-      width: 50rem;
+        "title ." 5%
+        "paragraph profile" 95% / 1fr 0.7fr;
+      width: 60rem;
+      // padding: 3rem 5rem;
+      border-radius: 1rem;
       background-color: $anthracite;
-      padding: 0;
       .about-title {
-        margin-top: 5rem;
+        margin-top: 0rem;
       }
       .about-profile {
         width: 45vh;
         height: 45vh;
-        margin-left: 3rem;
+        margin-left: 2rem;
       }
     }
   }
@@ -113,16 +120,16 @@ Screen = B/w 1025px to 1366px
     }
     .projectList {
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-      width: 50rem;
+      width: 60rem;
       gap: 3rem;
       .project-container {
         box-shadow: none;
-        border: 1px solid $white;
+        border: 2px solid $white;
         cursor: pointer;
         transition: all 0.15s ease-in-out;
         &:hover {
           box-shadow: $shadow;
-          transform: scale(1.005);
+          transform: scale(1.01);
           border: 1px solid $white;
         }
       }
@@ -134,8 +141,7 @@ Screen = B/w 1025px to 1366px
     grid:
       ". title ." 10%
       "image image image" 80%
-      ". dots ." 10% / 1fr 50rem 1fr;
-
+      ". dots ." 10% / 1fr 60rem 1fr;
     padding: 0;
     .slide-container {
       width: 60rem;
@@ -163,7 +169,6 @@ Screen = B/w 1025px to 1366px
   }
   /* SKILLS SECTION */
   .skills-container {
-    display: grid;
     grid-template-areas:
       "title"
       "badges";
@@ -175,39 +180,168 @@ Screen = B/w 1025px to 1366px
     }
     .skills-badges {
       width: 50rem;
-      gap: 2rem;
+      gap: 1rem 4rem;
+      grid-template-columns: repeat(6, 80px);
       grid-template-rows: repeat(5, 100px);
-      .badge > img {
-        width: 50%;
-        height: 50%;
-      }
     }
   }
 
   /* CONTACT SECTION */
-  .contact-container {
-    grid:
-      "goodbye profile" 1fr
-      "icons profile" 0.5fr
-      "footer profile" 0.5fr / 1fr 1fr;
+  #contact-section {
     height: 100vh;
-    padding: 10%;
-    border-radius: 0;
-    .contact-profile {
-      img {
-        margin-left: 3rem;
-        width: 50vh;
-      }
-    }
-    .contact-goodbye {
-      width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $anthracite;
+    .contact-container {
+      grid:
+        ". goodbye profile ." 1fr
+        ". icons profile ." 0.5fr
+        ". footer profile ." 0.8fr / auto 25rem 25rem auto;
+      width: 70rem;
       padding: 0;
-      p {
-        font-size: 1.3rem;
+      height: 95vh;
+      border-radius: 1rem 1rem 0 0;
+      .contact-profile {
+        img {
+          margin-left: 3rem;
+          width: 50vh;
+        }
+      }
+      .contact-goodbye {
+        align-self: end;
+        width: 100%;
+        padding: 0;
+        p {
+          font-size: 1.1rem;
+        }
+      }
+      .contact-icons {
+        width: 100%;
+      }
+      .contact-footer {
+        align-self: start;
       }
     }
-    .contact-icons {
-      width: 90%;
+  }
+}
+
+/*
+Device = Desktops
+Screen = 1367px to higher resolution desktops
+*/
+@media (min-width: 1367px) {
+  html {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  /* HOME SECTION */
+  #home-section {
+    .nav-container {
+      .nav-menu {
+        width: 60%;
+      }
+    }
+
+    /* BACKGROUND */
+    .bg-container {
+      svg.bg-logo {
+        height: 55vh;
+        width: 55vh;
+        :nth-child(1) {
+          stroke-width: 15;
+        }
+        :nth-child(2) {
+          stroke-width: 10;
+        }
+        :nth-child(3) {
+          stroke-width: 15;
+        }
+      }
+
+      @keyframes roll {
+        0% {
+          transform: rotate(0) scale(1);
+          box-shadow: 0 0 100px 40px $lightblue-o;
+          stroke-width: 12;
+        }
+        50% {
+          transform: rotate(180deg) scale(1.1);
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+          box-shadow: 0 0 100px 40px $lightblue-o;
+        }
+      }
+    }
+  }
+
+  /* ABOUT SECTION */
+  #about-section {
+    h3 {
+      font-size: 1.5rem;
+    }
+    padding: 5rem 0;
+    .about-container {
+      grid:
+        "title ." 5%
+        "paragraph profile" 95% / 1fr 0.5fr;
+      width: 60rem;
+      padding: 0;
+      .about-profile {
+        width: 40vh;
+        height: 40vh;
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  /* SLIDE SECTION */
+  #slide-section {
+    .slide-container {
+      width: 80rem;
+    }
+  }
+
+  /* SKILLS SECTION */
+  .skills-container {
+    height: 65vh;
+    .skills-badges {
+      width: 60rem;
+    }
+  }
+
+  /* CONTACT SECTION */
+  #contact-section {
+    height: 33vh;
+    margin-top: 2vh;
+    .contact-container {
+      grid:
+        ". icons profile  goodbye ." 1fr
+        ".  footer profile goodbye ." 1fr / auto 1fr 1fr 1fr auto;
+      height: inherit;
+      .contact-profile {
+        img {
+          margin: 0;
+          width: 70%;
+        }
+      }
+      .contact-goodbye {
+        align-self: center;
+        p {
+          font-size: 1rem;
+          text-align: left;
+        }
+      }
+      .contact-icons {
+        width: 80%;
+        padding-top: 6rem;
+      }
+      .contact-footer {
+        align-self: center;
+        padding-bottom: 6rem;
+      }
     }
   }
 }
