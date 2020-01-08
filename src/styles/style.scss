@@ -438,77 +438,79 @@ Screen = 320px to 480px
   }
 
   //CONTACT
-  .contact-container {
-    height: 99vh;
-    width: 100%;
-    padding: 5%;
-    border-radius: 1rem 1rem 0 0;
-    scroll-snap-align: start;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas:
-      "profile"
-      "goodbye"
-      "icons"
-      "footer";
-    grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
-    grid-template-columns: 1fr;
+  #contact-section {
     background-color: $anthracite;
-    transition: all 0.5s ease-in-out;
-    * {
-      color: $white;
-    }
-    .contact-profile {
-      grid-area: profile;
-      display: flex;
+    border-radius: 1rem 1rem 0 0;
+    .contact-container {
+      height: 99vh;
+      width: 100%;
+      padding: 5%;
+      scroll-snap-align: start;
+      display: grid;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      border-radius: 50%;
-      img {
-        width: 70%;
-        border-radius: inherit;
+      grid-template-areas:
+        "profile"
+        "goodbye"
+        "icons"
+        "footer";
+      grid-template-rows: 2fr 1fr 0.5fr 0.5fr;
+      grid-template-columns: 1fr;
+      transition: all 0.5s ease-in-out;
+      * {
+        color: $white;
       }
-    }
-    .contact-goodbye {
-      grid-area: goodbye;
-      padding: 5%;
-      p {
-        text-align: justify;
-        line-height: 1.5rem;
-      }
-    }
-    .contact-icons {
-      grid-area: icons;
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      margin: auto;
-      .icon {
-        text-align: center;
-        height: 3rem;
-        width: 3rem;
+      .contact-profile {
+        grid-area: profile;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         border-radius: 50%;
-        font-size: 2.5rem;
-        cursor: pointer;
-        * {
-          color: $lightblue;
+        img {
+          width: 70%;
+          border-radius: inherit;
         }
       }
-    }
-    .contact-footer {
-      margin-top: 1rem;
-      grid-area: footer;
-      display: flex;
-      justify-content: center;
-    }
-    .contact-logo {
-      height: 2.5rem;
-    }
-    .contact-paragraph {
-      align-self: center;
-      font-size: 90%;
+      .contact-goodbye {
+        grid-area: goodbye;
+        padding: 5%;
+        p {
+          text-align: justify;
+          line-height: 1.5rem;
+        }
+      }
+      .contact-icons {
+        grid-area: icons;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        .icon {
+          text-align: center;
+          height: 3rem;
+          width: 3rem;
+          border-radius: 50%;
+          font-size: 2.5rem;
+          cursor: pointer;
+          * {
+            color: $lightblue;
+          }
+        }
+      }
+      .contact-footer {
+        margin-top: 1rem;
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+      }
+      .contact-logo {
+        height: 2.5rem;
+      }
+      .contact-paragraph {
+        align-self: center;
+        font-size: 90%;
+      }
     }
   }
 }

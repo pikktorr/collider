@@ -191,7 +191,7 @@ Screen = B/w 1025px to 1366px
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: $anthracite;
+    border-radius: 0;
     .contact-container {
       grid:
         ". goodbye profile ." 1fr
@@ -199,8 +199,7 @@ Screen = B/w 1025px to 1366px
         ". footer profile ." 0.8fr / auto 25rem 25rem auto;
       width: 70rem;
       padding: 0;
-      height: 95vh;
-      border-radius: 1rem 1rem 0 0;
+      height: 100vh;
       .contact-profile {
         img {
           margin-left: 3rem;
