@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rm -rf .cache dist && parcel src/index.html",
     "cleanup": "rm -rf .cache dist",
-    "predeploy": "rm -rf .cache dist && parcel build src/index.html",
+    "predeploy": "rm -rf .cache dist && parcel build src/index.html --public-url /landing-page/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
