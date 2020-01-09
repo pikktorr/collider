@@ -7,7 +7,7 @@ Device = Laptops, Desktops
 Screen = B/w 1025px to 1366px
 */
 
-@media (min-width: 1025px) {
+@media only screen and (min-width: 1025px) {
   /* BACK TO TOP BUTTON */
   .back-to-top {
     right: 2%;
@@ -200,12 +200,6 @@ Screen = B/w 1025px to 1366px
       width: 70rem;
       padding: 0;
       height: 100vh;
-      .contact-profile {
-        img {
-          margin-left: 3rem;
-          width: 50vh;
-        }
-      }
       .contact-goodbye {
         align-self: end;
         width: 100%;
@@ -228,7 +222,7 @@ Screen = B/w 1025px to 1366px
 Device = Desktops
 Screen = 1367px to higher resolution desktops
 */
-@media (min-width: 1367px) {
+@media only screen and (min-width: 1367px) {
   html {
     h1 {
       font-size: 2rem;
@@ -321,9 +315,10 @@ Screen = 1367px to higher resolution desktops
         ".  footer profile goodbye ." 1fr / auto 1fr 1fr 1fr auto;
       height: inherit;
       .contact-profile {
+        height: 25vh;
+        width: 25vh;
         img {
           margin: 0;
-          width: 70%;
         }
       }
       .contact-goodbye {

@@ -4,12 +4,13 @@
 Device = Most of the Smartphones Mobiles (Portrait)
 Screen = 320px to 480px
 */
-@media (min-width: 320px) {
+@media only screen and (min-width: 320px) {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: $anthracite;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html {
@@ -17,7 +18,6 @@ Screen = 320px to 480px
     font-weight: 400;
     max-height: 100vh;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
     h1 {
       font-weight: 700;
     }
@@ -463,12 +463,13 @@ Screen = 320px to 480px
       .contact-profile {
         grid-area: profile;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        width: 60vw;
+        height: 60vw;
         border-radius: 50%;
+        margin: auto;
         img {
-          width: 70%;
+          width: inherit;
+          height: inherit;
           border-radius: inherit;
         }
       }
@@ -476,7 +477,7 @@ Screen = 320px to 480px
         grid-area: goodbye;
         padding: 5%;
         p {
-          text-align: justify;
+          text-align: center;
           line-height: 1.5rem;
         }
       }

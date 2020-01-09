@@ -5,7 +5,7 @@ Screen = B/w 481px to 767px
 */
 @import "variables";
 
-@media (min-width: 481px) {
+@media only screen and (min-width: 481px) {
   html {
     h1 {
       font-size: 1.8rem;
@@ -72,6 +72,8 @@ Screen = B/w 481px to 767px
         height: 45vw;
         border-radius: 50%;
         img {
+          width: inherit;
+          height: inherit;
           border-radius: inherit;
         }
       }
@@ -123,22 +125,19 @@ Screen = B/w 481px to 767px
   }
 
   /* CONTACT SECTION */
-  .contact-container {
-    p {
-      font-size: 1.1rem;
-    }
-    height: 98vh;
-    padding: 10%;
-    .contact-profile {
-      img {
-        width: 50vw;
+  #contact-section {
+    .contact-container {
+      p {
+        font-size: 1.1rem;
       }
-    }
-    .contact-goodbye {
-      padding: 5%;
-    }
-    .contact-icons {
-      width: 70%;
+      height: 98vh;
+      padding: 10%;
+      .contact-goodbye {
+        padding: 5%;
+      }
+      .contact-icons {
+        width: 70%;
+      }
     }
   }
 }
@@ -147,7 +146,7 @@ Screen = B/w 481px to 767px
 Device = Ipads (portrait)
 Screen = 768px to 1024px
 */
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   /* PROJECTS SECTION */
   #projects-section {
     .projectList {
@@ -189,15 +188,18 @@ Screen = 768px to 1024px
   }
 
   /* CONTACT SECTION */
-  .contact-container {
-    p {
-      font-size: 1.3rem;
-    }
-    .contact-goodbye {
-      padding: 10%;
-    }
-    .contact-icons {
-      width: 50%;
+  #contact-section {
+    .contact-container {
+      p {
+        font-size: 1.3rem;
+      }
+
+      .contact-goodbye {
+        padding: 10%;
+      }
+      .contact-icons {
+        width: 50%;
+      }
     }
   }
 }
@@ -206,7 +208,7 @@ Screen = 768px to 1024px
 Device = Tablets, Ipads (landscape)
 Screen = B/w 768px to 1024px
 */
-@media (min-width: 768px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (orientation: landscape) {
   /* HOME SECTION */
   #home-section {
     .nav-container {
@@ -358,29 +360,31 @@ Screen = B/w 768px to 1024px
   }
 
   /* CONTACT SECTION */
-  .contact-container {
-    grid:
-      "goodbye profile" 1fr
-      "icons profile" 0.5fr
-      "footer profile" 0.5fr / 1fr 1fr;
-    height: 100vh;
-    padding: 10%;
+  #contact-section {
     border-radius: 0;
-    .contact-profile {
-      img {
-        margin-left: 3rem;
-        width: 50vh;
+    .contact-container {
+      grid:
+        "goodbye profile" 1fr
+        "icons profile" 0.5fr
+        "footer profile" 0.5fr / 1fr 1fr;
+      height: 100vh;
+      padding: 10%;
+      border-radius: 0;
+      .contact-profile {
+        height: 45vh;
+        width: 45vh;
+        margin-right: 1rem;
       }
-    }
-    .contact-goodbye {
-      width: 100%;
-      padding: 0;
-      p {
-        font-size: 1.3rem;
+      .contact-goodbye {
+        width: 100%;
+        padding: 0;
+        p {
+          font-size: 1.3rem;
+        }
       }
-    }
-    .contact-icons {
-      width: 90%;
+      .contact-icons {
+        width: 90%;
+      }
     }
   }
 }
