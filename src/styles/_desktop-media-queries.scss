@@ -55,7 +55,6 @@ Screen = B/w 1025px to 1366px
         0% {
           transform: rotate(0) scale(1);
           box-shadow: 0 0 50px 20px $lightblue-o;
-          stroke-width: 12;
         }
         50% {
           transform: rotate(180deg) scale(1.1);
@@ -89,7 +88,6 @@ Screen = B/w 1025px to 1366px
         "title ." 5%
         "paragraph profile" 95% / 1fr 0.7fr;
       width: 60rem;
-      // padding: 3rem 5rem;
       border-radius: 1rem;
       background-color: $anthracite;
       .about-title {
@@ -112,6 +110,7 @@ Screen = B/w 1025px to 1366px
       font-size: 1rem;
     }
     justify-content: center;
+    grid-template-rows: 5% 95%;
     gap: 2rem;
     padding: 0;
     margin-bottom: 3rem;
@@ -120,8 +119,8 @@ Screen = B/w 1025px to 1366px
     }
     .projectList {
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-      width: 60rem;
-      gap: 3rem;
+      width: 50rem;
+      gap: 2.5rem;
       .project-container {
         box-shadow: none;
         border: 2px solid $white;
@@ -141,7 +140,7 @@ Screen = B/w 1025px to 1366px
     grid:
       ". title ." 10%
       "image image image" 80%
-      ". dots ." 10% / 1fr 60rem 1fr;
+      ". dots ." 10% / 1fr 50rem 1fr;
     padding: 0;
     .slide-container {
       width: 60rem;
@@ -172,7 +171,7 @@ Screen = B/w 1025px to 1366px
     grid-template-areas:
       "title"
       "badges";
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 5% 95%;
     padding: 0;
     justify-content: center;
     .skills-title {
@@ -290,8 +289,20 @@ Screen = 1367px to higher resolution desktops
     }
   }
 
+    /* PROJECTS SECTION */
+    #projects-section {
+      .projectList {
+        width: 60rem;
+      }
+    }
+  
   /* SLIDE SECTION */
   #slide-section {
+    grid:
+    ". title ." 10%
+    "image image image" 80%
+    ". dots ." 10% / 1fr 60rem 1fr;
+
     .slide-container {
       width: 80rem;
     }

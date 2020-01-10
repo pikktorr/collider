@@ -149,7 +149,7 @@ Screen = 320px to 480px
         0% {
           transform: rotate(0) scale(1);
           box-shadow: 0 0 100px 50px $lightblue-o;
-          stroke-width: 12;
+          // stroke-width: 12;
         }
         50% {
           transform: rotate(180deg) scale(1.1);
@@ -217,7 +217,7 @@ Screen = 320px to 480px
     grid-template-areas:
       "title"
       "projectList";
-    grid-template-rows: 5% 95%;
+    grid-template-rows: 2rem 95%;
     gap: 2rem;
     .projectList-title {
       @include titles();

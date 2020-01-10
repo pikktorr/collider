@@ -26,7 +26,7 @@ export const projects = [
     title: "Infinite Carousel",
     tool: "JavaScript",
     about:
-      "A vanilla javascript infinite carousel with my favourite music albums. Alt-J, Beck, John Coffey, Portugal the Man, Radiohead, Red Hot Chili Peppers, Slipknot, Tool",
+      "A vanilla javascript infinite carousel with my favourite music albums. Alt-J, Beck, John Coffey, Portugal the Man, Radiohead, etc.",
     image: require("../images/projects/carousel_small.png"),
     link: "https://pikktorr.github.io/vanilla-carousel/"
   },
