@@ -58,7 +58,6 @@ const scrollPage = targetId => {
   const targetLeftPosition = target.getBoundingClientRect().left;
   const targetTopPosition = target.getBoundingClientRect().top;
   window.scrollTo(targetLeftPosition, targetTopPosition);
-  // without options, it works with Edge and Safari
 };
 
 const navToSections = [
@@ -77,17 +76,6 @@ navToSections.map(element => {
     if (window.innerWidth < window.innerHeight) closeMenu();
   });
 });
-
-//ABOUT
-// const aboutTransition = () => {
-//   const aboutSection = document.querySelector("#about-section");
-//   const aboutTop = aboutSection.getBoundingClientRect().top;
-//   aboutTop < window.innerHeight / 2 && aboutTop > -(window.innerHeight / 2)
-//     ? (aboutSection.style.opacity = "1")
-//     : (aboutSection.style.opacity = "0");
-// };
-
-// window.addEventListener("scroll", aboutTransition);
 
 // PROJECTS
 const projectList = document.querySelector(".projectList");
@@ -230,17 +218,6 @@ skills.map((skill, index) => {
   `;
   return skillsBadges.appendChild(badge);
 });
-
-//CONTACT
-// const contactTransition = () => {
-//   const contactSection = document.querySelector("#contact-section");
-//   const contactTop = contactSection.getBoundingClientRect().top;
-//   contactTop < window.innerHeight / 2
-//     ? (contactSection.style.opacity = "1")
-//     : (contactSection.style.opacity = "0");
-// };
-
-// window.addEventListener("scroll", contactTransition);
 
 const email = document.querySelector(".email");
 const github = document.querySelector(".github");
