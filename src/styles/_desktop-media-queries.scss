@@ -256,7 +256,6 @@ Screen = 1367px to higher resolution desktops
         0% {
           transform: rotate(0) scale(1);
           box-shadow: 0 0 100px 40px $lightblue-o;
-          stroke-width: 12;
         }
         50% {
           transform: rotate(180deg) scale(1.1);
@@ -289,19 +288,20 @@ Screen = 1367px to higher resolution desktops
     }
   }
 
-    /* PROJECTS SECTION */
-    #projects-section {
-      .projectList {
-        width: 60rem;
-      }
+  /* PROJECTS SECTION */
+  #projects-section {
+    gap: 3rem;
+    .projectList {
+      width: 60rem;
     }
-  
+  }
+
   /* SLIDE SECTION */
   #slide-section {
     grid:
-    ". title ." 10%
-    "image image image" 80%
-    ". dots ." 10% / 1fr 60rem 1fr;
+      ". title ." 10%
+      "image image image" 80%
+      ". dots ." 10% / 1fr 60rem 1fr;
 
     .slide-container {
       width: 80rem;
@@ -313,6 +313,7 @@ Screen = 1367px to higher resolution desktops
     height: 65vh;
     .skills-badges {
       width: 60rem;
+      gap: 1rem 6rem;
     }
   }
 

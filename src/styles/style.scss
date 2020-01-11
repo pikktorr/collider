@@ -140,16 +140,12 @@ Screen = 320px to 480px
         circle {
           border-radius: inherit;
         }
-        &:hover {
-          stroke: $lightblue;
-        }
       }
 
       @keyframes roll {
         0% {
           transform: rotate(0) scale(1);
           box-shadow: 0 0 100px 50px $lightblue-o;
-          // stroke-width: 12;
         }
         50% {
           transform: rotate(180deg) scale(1.1);

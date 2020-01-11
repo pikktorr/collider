@@ -22,19 +22,18 @@ Screen = B/w 481px to 767px
         }
       }
     }
-  }
-
-  /* BACKGROUND */
-  .bg-container {
-    svg.bg-logo {
-      :nth-child(1) {
-        stroke-width: 12;
-      }
-      :nth-child(2) {
-        stroke-width: 7;
-      }
-      :nth-child(3) {
-        stroke-width: 15;
+    /* BACKGROUND */
+    .bg-container {
+      svg.bg-logo {
+        :nth-child(1) {
+          stroke-width: 12;
+        }
+        :nth-child(2) {
+          stroke-width: 7;
+        }
+        :nth-child(3) {
+          stroke-width: 15;
+        }
       }
     }
   }
@@ -252,9 +251,6 @@ Screen = B/w 768px to 1024px
         height: 60vh;
         width: 60vh;
         cursor: default;
-        &:hover {
-          stroke: $blue;
-        }
         :nth-child(1) {
           stroke-width: 12;
         }
@@ -270,7 +266,6 @@ Screen = B/w 768px to 1024px
         0% {
           transform: rotate(0) scale(1);
           box-shadow: 0 0 100px 50px $lightblue-o;
-          stroke-width: 12;
         }
         50% {
           transform: rotate(180deg) scale(1.1);
