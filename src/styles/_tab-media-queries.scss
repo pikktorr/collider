@@ -24,7 +24,7 @@ Screen = B/w 481px to 767px
     }
     /* BACKGROUND */
     .bg-container {
-      svg.bg-logo {
+      .bg-logo {
         :nth-child(1) {
           stroke-width: 12;
         }
@@ -247,7 +247,7 @@ Screen = B/w 768px to 1024px
     /* BACKGROUND */
     .bg-container {
       height: 85vh;
-      svg.bg-logo {
+      .bg-logo {
         height: 60vh;
         width: 60vh;
         cursor: default;

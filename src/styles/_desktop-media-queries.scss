@@ -39,7 +39,7 @@ Screen = B/w 1025px to 1366px
     /* BACKGROUND */
     .bg-container {
       height: 90vh;
-      svg.bg-logo {
+      .bg-logo {
         :nth-child(1) {
           stroke-width: 10;
         }
@@ -238,7 +238,7 @@ Screen = 1367px to higher resolution desktops
 
     /* BACKGROUND */
     .bg-container {
-      svg.bg-logo {
+      .bg-logo {
         height: 55vh;
         width: 55vh;
         :nth-child(1) {
