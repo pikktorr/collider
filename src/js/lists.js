@@ -15,8 +15,16 @@ export const projects = [
     link: "https://pikktorr.github.io/robofriends/"
   },
   {
+    title: "Horsie Chess Board",
+    tool: "Javascript, HTML, CSS",
+    about:
+      "Place down your Knight on the chess board and see how many moves you have, where to move from that field.",
+    image: require("../images/projects/chess-small.png"),
+    link: "https://pikktorr.github.io/horsie-chess-board/"
+  },
+  {
     title: "Can't Do It All",
-    tool: "Javascript",
+    tool: "Javascript, HTML, CSS, Materialize",
     about:
       "One have to choose between coding, social life and sleeping. Can't do it all...",
     image: require("../images/projects/cant-do-it-all-small.png"),
@@ -24,7 +32,7 @@ export const projects = [
   },
   {
     title: "Infinite Carousel",
-    tool: "JavaScript",
+    tool: "JavaScript, HTML, CSS",
     about:
       "A vanilla javascript infinite carousel with my favourite music albums. Alt-J, Beck, John Coffey, Portugal the Man, Radiohead, etc.",
     image: require("../images/projects/carousel_small.png"),
@@ -32,7 +40,7 @@ export const projects = [
   },
   {
     title: "The Shopping List",
-    tool: "JavaScript",
+    tool: "JavaScript, HTML, CSS",
     about:
       "A simple, mandatory shopping list with random colored item backgrounds. Everything you need!",
     image: require("../images/projects/shopping_small.jpg"),
