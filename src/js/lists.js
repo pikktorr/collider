@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: "Breaking Text",
+    tool: "Javascript, HTML, CSS, Materialize",
+    about:
+      "Write or insert text into the input field, then brake lines at the given number.",
+    image: require("../images/projects/breaking-text-small.jpg"),
+    link: "https://pikktorr.github.io/breaking-text/"
+  },
+  {
+    title: "Horsie Chess Board",
+    tool: "Javascript, HTML, CSS",
+    about:
+      "Place down your Knight on the chess board and see how many moves you have, where to move from that field.",
+    image: require("../images/projects/chess-small.png"),
+    link: "https://pikktorr.github.io/horsie-chess-board/"
+  },
+  {
     title: "Smart-Brain",
     tool: "React.js, PostgreSQL",
     about:
@@ -13,14 +29,6 @@ export const projects = [
     about: "Type in names to get an instant search result.",
     image: require("../images/projects/robofriends_small.png"),
     link: "https://pikktorr.github.io/robofriends/"
-  },
-  {
-    title: "Horsie Chess Board",
-    tool: "Javascript, HTML, CSS",
-    about:
-      "Place down your Knight on the chess board and see how many moves you have, where to move from that field.",
-    image: require("../images/projects/chess-small.png"),
-    link: "https://pikktorr.github.io/horsie-chess-board/"
   },
   {
     title: "Can't Do It All",
