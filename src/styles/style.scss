@@ -137,11 +137,8 @@ Screen = 320px to 480px
         stroke: $blue;
         animation: roll 10s infinite linear;
         transition: all 0.2s ease-in-out;
-        circle {
-          border-radius: inherit;
-        }
+        padding: 1rem;
       }
-
       @keyframes roll {
         0% {
           transform: rotate(0) scale(1);
@@ -294,6 +291,7 @@ Screen = 320px to 480px
         position: absolute;
         width: inherit;
         height: 100%;
+        padding: 1rem;
         object-fit: cover;
         border-radius: 0.5rem;
         transition: all 0.2s ease-out;
@@ -381,7 +379,7 @@ Screen = 320px to 480px
       height: 4rem;
       font-size: 3.5rem;
       text-align: center;
-      color: $lightblue;
+      color: $white;
       opacity: 1;
       cursor: pointer;
     }
@@ -399,7 +397,7 @@ Screen = 320px to 480px
 
   //SKILLS
   .skills-container {
-    height: 100vh;
+    height: auto;
     width: 100%;
     scroll-snap-align: start;
     display: grid;
@@ -410,6 +408,7 @@ Screen = 320px to 480px
     padding: 5%;
     .skills-title {
       @include titles();
+      margin-bottom: 2rem;
     }
     .skills-badges {
       grid-area: badges;

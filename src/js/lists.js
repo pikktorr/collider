@@ -5,7 +5,7 @@ export const projects = [
     about:
       "Write or insert text into the input field, then brake lines at the given number.",
     image: require("../images/projects/breaking-text-small.jpg"),
-    link: "https://pikktorr.github.io/breaking-text/"
+    link: "https://pikktorr.github.io/breaking-text/",
   },
   {
     title: "Horsie Chess Board",
@@ -13,38 +13,61 @@ export const projects = [
     about:
       "Place down your Knight on the chess board and see how many moves you have, where to move from that field.",
     image: require("../images/projects/chess-small.png"),
-    link: "https://pikktorr.github.io/horsie-chess-board/"
+    link: "https://pikktorr.github.io/horsie-chess-board/",
   },
   {
-    title: "Smart-Brain",
+    title: "Can't Do It All",
+    tool: "Javascript, HTML, CSS, Materialize",
+    about:
+      "One have to choose between coding, social life and sleeping. Can't do it all... especially nowadays.",
+    image: require("../images/projects/cant-do-it-all-2.jpg"),
+    link: "https://pikktorr.github.io/cant-do-it-all/",
+  },
+  {
+    title: "Smart-Brainer",
     tool: "React.js, PostgreSQL",
     about:
-      "This application detects faces on pasted images and counts how many times you used it with the registered profile.",
+      "This application detects faces on pasted images. Can use with any fictional email addresses!",
     image: require("../images/projects/smartbrainer_small.jpg"),
-    link: "https://smart-brainer-by-pikktorr.herokuapp.com/"
+    link: "https://smart-brainer-by-pikktorr.herokuapp.com/",
   },
   {
     title: "RoboFriends",
     tool: "React.js",
     about: "Type in names to get an instant search result.",
     image: require("../images/projects/robofriends_small.png"),
-    link: "https://pikktorr.github.io/robofriends/"
+    link: "https://pikktorr.github.io/robofriends/",
   },
-  {
-    title: "Can't Do It All",
-    tool: "Javascript, HTML, CSS, Materialize",
-    about:
-      "One have to choose between coding, social life and sleeping. Can't do it all...",
-    image: require("../images/projects/cant-do-it-all-small.png"),
-    link: "https://pikktorr.github.io/cant-do-it-all/"
-  },
+
   {
     title: "Infinite Carousel",
     tool: "JavaScript, HTML, CSS",
     about:
       "A vanilla javascript infinite carousel with my favourite music albums. Alt-J, Beck, John Coffey, Portugal the Man, Radiohead, etc.",
     image: require("../images/projects/carousel_small.png"),
-    link: "https://pikktorr.github.io/vanilla-carousel/"
+    link: "https://pikktorr.github.io/vanilla-carousel/",
+  },
+  {
+    title: "Jester Tester",
+    tool: "JavaScript, Jest",
+    about: "Basic functions testing.",
+    image: require("../images/projects/testing.png"),
+    link: "https://repl.it/@pikktorr/jest-playground",
+  },
+  {
+    title: "Array Implementation",
+    tool: "JavaScript",
+    about:
+      "Array practice: create an array from scratch, with constructors, methods.",
+    image: require("../images/projects/array-implementation.png"),
+    link: "https://repl.it/@pikktorr/array-implementation",
+  },
+  {
+    title: "Comparing Arrays",
+    tool: "JavaScript",
+    about: "Array practice: compare two arrays with 'O(a+b)' time complexity.",
+    image: require("../images/projects/comparing-arrays.png"),
+    link: "https://repl.it/@pikktorr/contains-common-item",
   },
   {
     title: "The Shopping List",
@@ -52,7 +75,7 @@ export const projects = [
     about:
       "A simple, mandatory shopping list with random colored item backgrounds. Everything you need!",
     image: require("../images/projects/shopping_small.jpg"),
-    link: "https://pikktorr.github.io/shopping-list.github.io/"
+    link: "https://pikktorr.github.io/shopping-list.github.io/",
   },
   {
     title: "UX/UI Portfolio Design",
@@ -61,240 +84,252 @@ export const projects = [
       "A mobile portfolio design from hand drawn sketches to wireframes to prototype preview.",
     image: require("../images/projects/ux_ui_small.png"),
     link:
-      "https://xd.adobe.com/view/f7600bf5-e88a-4c24-4472-e9ecc2d04c0c-8151/?fullscreen"
-  }
+      "https://xd.adobe.com/view/f7600bf5-e88a-4c24-4472-e9ecc2d04c0c-8151/?fullscreen",
+  },
 ];
 
 export const gallery = [
   {
     image: require("../images/gallery/msc-1.png"),
     title: "Outdoor Stage in Szeged",
-    about: "Master Architecture Degree project"
+    about: "Master Architecture Degree project",
   },
   {
     image: require("../images/gallery/msc-2.png"),
     title: "Installation in the Liget Park",
-    about: "Master Architecture Degree Project"
+    about: "Master Architecture Degree Project",
   },
   {
     image: require("../images/gallery/msc-3.png"),
     title: "Floor Plans and Detailed Section",
-    about: "Master Architecture Degree Project"
+    about: "Master Architecture Degree Project",
   },
   {
     image: require("../images/gallery/msc-4.png"),
     title: "Sections and Facades",
-    about: "Master Architecture Degree Project"
+    about: "Master Architecture Degree Project",
   },
   {
     image: require("../images/gallery/msc-5.png"),
     title: "Day/Night Visuals",
-    about: "Master Architecture Degree Project"
+    about: "Master Architecture Degree Project",
   },
   {
     image: require("../images/gallery/bsc-1.jpg"),
     title: "Musical Instruments Workshop in Pécs",
-    about: "Architectural Engineering Degree Project"
+    about: "Architectural Engineering Degree Project",
   },
   {
     image: require("../images/gallery/bsc-2.jpg"),
     title: "Street View of the Workshop",
-    about: "Architectural Engineering Degree Project"
+    about: "Architectural Engineering Degree Project",
   },
   {
     image: require("../images/gallery/bsc-3.jpg"),
     title: "Floor Plans and Sections",
-    about: "Architectural Engineering Degree Project"
+    about: "Architectural Engineering Degree Project",
   },
   {
     image: require("../images/gallery/bsc-4.jpg"),
     title: "The Show-Window from the Street",
-    about: "Architectural Engineering Degree Project"
+    about: "Architectural Engineering Degree Project",
   },
   {
     image: require("../images/gallery/bsc-5.jpg"),
     title: "Inner Showroom ",
-    about: "Architectural Engineering Degree Project"
+    about: "Architectural Engineering Degree Project",
   },
   {
     image: require("../images/gallery/digital-1.png"),
     title: "Wolf Medallion from The Witcher",
-    about: "Digital Art"
+    about: "Digital Art",
   },
   {
     image: require("../images/gallery/digital-2.png"),
     title: "Need Potion",
-    about: "Digital Art"
+    about: "Digital Art",
   },
   {
     image: require("../images/gallery/digital-3.jpg"),
     title: "Messing with Watercolour",
-    about: "Digital Art"
+    about: "Digital Art",
   },
   {
     image: require("../images/gallery/digital-4.png"),
     title: "Oh Deer!",
-    about: "Digital Art"
+    about: "Digital Art",
   },
   {
-    image: require("../images/gallery/digital-5.png"),
+    image: require("../images/gallery/digital-5.jpg"),
     title: "Concrete Forest",
-    about: "Digital Art"
+    about: "Digital Art",
   },
   {
     image: require("../images/gallery/sketch-1.png"),
     title: "By the Lake",
-    about: "Sketches"
+    about: "Sketches",
   },
   {
     image: require("../images/gallery/sketch-2.png"),
     title: "Backend Firewalls",
-    about: "Sketches"
+    about: "Sketches",
   },
   {
     image: require("../images/gallery/sketch-3.png"),
     title: "Móra Ferenc Museum, Szeged",
-    about: "Sketches"
+    about: "Sketches",
   },
   {
     image: require("../images/gallery/sketch-4.png"),
     title: "Anna-Well, Szeged",
-    about: "Sketches"
+    about: "Sketches",
   },
   {
     image: require("../images/gallery/sketch-5.png"),
     title: "It's a Tree",
-    about: "Sketches"
-  }
+    about: "Sketches",
+  },
 ];
 
 export const skills = [
   {
     image: require("../images/skills/3dsmax.png"),
-    name: "3ds Max"
+    name: "3ds Max",
   },
   {
     image: require("../images/skills/adobexd.png"),
-    name: "Adobe Xd"
+    name: "Adobe Xd",
   },
-  // {
-  //   image: require("../images/skills/affinityphoto.png"),
-  //   name: "Affinity Photo"
-  // },
   {
     image: require("../images/skills/Archicad.png"),
-    name: "ArchiCAD"
+    name: "ArchiCAD",
   },
   {
     image: require("../images/skills/bootstrap.png"),
-    name: "Bootstrap"
+    name: "Bootstrap",
   },
   {
     image: require("../images/skills/cinema4d.jpg"),
-    name: "Cinema 4D"
+    name: "Cinema 4D",
+  },
+  {
+    image: require("../images/skills/codesandbox.png"),
+    name: "Codesandbox",
   },
   {
     image: require("../images/skills/commandline.png"),
-    name: "Command Line"
+    name: "Command Line",
   },
   {
     image: require("../images/skills/css.png"),
-    name: "CSS3"
+    name: "CSS3",
   },
   {
     image: require("../images/skills/es6.png"),
-    name: "ECMAScript6"
+    name: "ECMAScript6",
   },
   {
     image: require("../images/skills/figma.png"),
-    name: "Figma"
+    name: "Figma",
   },
   {
     image: require("../images/skills/git.png"),
-    name: "Git"
+    name: "Git",
   },
   {
     image: require("../images/skills/github.png"),
-    name: "Github"
+    name: "Github",
   },
   {
     image: require("../images/skills/google.png"),
-    name: "HowToGoogleThings"
+    name: "HowToGoogleThings",
   },
   {
     image: require("../images/skills/heroku.png"),
-    name: "Heroku"
+    name: "Heroku",
   },
   {
     image: require("../images/skills/html.png"),
-    name: "HTML5"
+    name: "HTML5",
   },
   {
     image: require("../images/skills/illustrator.png"),
-    name: "Illustrator"
+    name: "Illustrator",
   },
   {
     image: require("../images/skills/Indesign.png"),
-    name: "Indesign"
+    name: "Indesign",
   },
   {
     image: require("../images/skills/javascript.png"),
-    name: "Javascript"
+    name: "Javascript",
+  },
+  {
+    image: require("../images/skills/jest.png"),
+    name: "Jest",
+  },
+  {
+    image: require("../images/skills/materialize.png"),
+    name: "Materialize",
   },
   {
     image: require("../images/skills/mdn.png"),
-    name: "MDN Webdocs"
+    name: "MDN Webdocs",
   },
   {
     image: require("../images/skills/nodejs.png"),
-    name: "Node.js"
+    name: "Node.js",
   },
   {
     image: require("../images/skills/npm.png"),
-    name: "npm"
+    name: "npm",
   },
   {
     image: require("../images/skills/parceljs.png"),
-    name: "Parcel.js"
+    name: "Parcel.js",
   },
   {
     image: require("../images/skills/photoshop.png"),
-    name: "Photoshop"
+    name: "Photoshop",
   },
   {
     image: require("../images/skills/postgresql.png"),
-    name: "PostgreSQL"
+    name: "PostgreSQL",
   },
   {
     image: require("../images/skills/postman.png"),
-    name: "Postman"
+    name: "Postman",
   },
-  // {
-  //   image: require("../images/skills/Prettier.png"),
-  //   name: "Prettier"
-  // },
   {
     image: require("../images/skills/Procreate.png"),
-    name: "Procreate"
+    name: "Procreate",
   },
   {
     image: require("../images/skills/Reactjs.png"),
-    name: "React.js"
+    name: "React.js",
+  },
+  {
+    image: require("../images/skills/repl.png"),
+    name: "Repl.it",
+  },
+  {
+    image: require("../images/skills/responsive-design.png"),
+    name: "Responsive Design",
   },
   {
     image: require("../images/skills/Sass.png"),
-    name: "Sass"
+    name: "Sass",
   },
   {
     image: require("../images/skills/sketchup.png"),
-    name: "Sketchup"
+    name: "Sketchup",
   },
   {
     image: require("../images/skills/trello.png"),
-    name: "Trello"
+    name: "Trello",
   },
   {
     image: require("../images/skills/vscode.png"),
-    name: "VS Code"
-  }
+    name: "VS Code",
+  },
 ];

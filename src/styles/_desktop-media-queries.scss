@@ -40,6 +40,7 @@ Screen = B/w 1025px to 1366px
     .bg-container {
       height: 90vh;
       .bg-logo {
+        padding: 0;
         :nth-child(1) {
           stroke-width: 10;
         }
@@ -168,6 +169,7 @@ Screen = B/w 1025px to 1366px
   }
   /* SKILLS SECTION */
   .skills-container {
+    margin-bottom: 5rem;
     grid-template-areas:
       "title"
       "badges";
@@ -181,7 +183,7 @@ Screen = B/w 1025px to 1366px
       width: 50rem;
       gap: 1rem 4rem;
       grid-template-columns: repeat(6, 80px);
-      grid-template-rows: repeat(5, 100px);
+      grid-auto-rows: auto;
     }
   }
 
@@ -310,7 +312,6 @@ Screen = 1367px to higher resolution desktops
 
   /* SKILLS SECTION */
   .skills-container {
-    height: 65vh;
     .skills-badges {
       width: 60rem;
       gap: 1rem 6rem;
@@ -319,24 +320,24 @@ Screen = 1367px to higher resolution desktops
 
   /* CONTACT SECTION */
   #contact-section {
-    height: 33vh;
-    margin-top: 2vh;
+    height: 60vh;
     .contact-container {
-      grid:
-        ". icons profile  goodbye ." 1fr
-        ".  footer profile goodbye ." 1fr / auto 1fr 1fr 1fr auto;
+      // grid:
+      //   ". icons profile  goodbye ." 1fr
+      //   ".  footer profile goodbye ." 1fr / auto 1fr 1fr 1fr auto;
       height: inherit;
       .contact-profile {
-        height: 25vh;
-        width: 25vh;
+        height: 40vh;
+        width: 40vh;
         justify-self: center;
         margin: 0;
+        margin-left: 10rem;
         img {
           margin: 0;
         }
       }
       .contact-goodbye {
-        align-self: center;
+        align-self: end;
         p {
           font-size: 1rem;
           text-align: left;
@@ -344,11 +345,11 @@ Screen = 1367px to higher resolution desktops
       }
       .contact-icons {
         width: 80%;
-        padding-top: 6rem;
+        // padding-top: 6rem;
       }
       .contact-footer {
-        align-self: center;
-        padding-bottom: 6rem;
+        align-self: start;
+        // padding-bottom: 6rem;
       }
     }
   }

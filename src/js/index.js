@@ -17,11 +17,11 @@ window.onscroll = () => scrollFunction();
 topButton.onclick = () => window.scrollTo(0, 0);
 
 // MOBILE MENU
-const heroLogo = document.querySelector(".bg-logo");
 const navContainer = document.querySelector(".nav-container");
 const navBackground = document.querySelector(".nav-background");
 const menu = document.querySelector(".nav-menu");
 const navCloseButton = document.querySelector(".menu-close");
+const heroLogo = document.querySelector(".bg-logo");
 
 const openMenu = () => {
   navContainer.style.display = "grid";
@@ -53,7 +53,7 @@ heroLogo.addEventListener("click", () => {
 navCloseButton.addEventListener("click", () => closeMenu());
 
 // NAVIGATION - SCROLL
-const scrollPage = targetId => {
+const scrollPage = (targetId) => {
   const target = document.querySelector(targetId);
   const targetLeftPosition = target.getBoundingClientRect().left;
   const targetTopPosition = target.getBoundingClientRect().top;
@@ -66,10 +66,10 @@ const navToSections = [
   { nav: "#nav-projects", section: "#projects-section" },
   { nav: "#nav-slide", section: "#slide-section" },
   { nav: "#nav-skills", section: "#skills-section" },
-  { nav: "#nav-contact", section: "#contact-section" }
+  { nav: "#nav-contact", section: "#contact-section" },
 ];
 
-navToSections.map(element => {
+navToSections.map((element) => {
   const navButton = document.querySelector(element.nav);
   navButton.addEventListener("click", () => {
     scrollPage(element.section);
@@ -79,7 +79,7 @@ navToSections.map(element => {
 
 // PROJECTS
 const projectList = document.querySelector(".projectList");
-projects.map(project => {
+projects.map((project) => {
   const oneProject = document.createElement("article");
   oneProject.className = "project-container";
   oneProject.innerHTML = `
@@ -93,7 +93,9 @@ projects.map(project => {
         <p>${project.about}</p>
       </div>
   `;
-  oneProject.addEventListener("click", () => window.open(project.link));
+  oneProject.addEventListener("click", () =>
+    window.open(project.link, "_blank", "noopener")
+  );
   return projectList.appendChild(oneProject);
 });
 
@@ -107,10 +109,10 @@ const showSlides = () => {
     slide.classList.add("hidden-img");
   });
   slideIndex >= slides.length ? (slideIndex = 0) : slideIndex;
-  slides.forEach(img => img.classList.remove("active-img"));
+  slides.forEach((img) => img.classList.remove("active-img"));
   slides[slideIndex].classList.replace("hidden-img", "active-img");
 
-  dots.forEach(dot => dot.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("active"));
   dots[slideIndex].classList.add("active");
 
   slideIndex++;
@@ -130,6 +132,9 @@ slides.forEach((slide, index) =>
         break;
       case 2:
         currentImage(10);
+        break;
+      case 3:
+        currentImage(15);
         break;
       default:
         currentImage(0);
@@ -167,16 +172,16 @@ const showModal = () => {
 
 const closeModal = () => {
   modal.style.display = "none";
-  images.map(img => img.remove());
+  images.map((img) => img.remove());
   document.body.style.overflowY = "";
 };
 
-const currentImage = n => {
+const currentImage = (n) => {
   showImage((galleryIndex = n));
 };
 
-const showImage = n => {
-  images.map(img => img.remove());
+const showImage = (n) => {
+  images.map((img) => img.remove());
 
   if (n >= images.length) {
     galleryIndex = 0;
@@ -187,22 +192,22 @@ const showImage = n => {
   galleryContainer.appendChild(images[galleryIndex]);
 };
 
-const plusImages = n => {
+const plusImages = (n) => {
   showImage((galleryIndex += n));
 };
 
 nextImg.addEventListener("click", () => plusImages(1));
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   if (event.which === 39 && modal.style.display === "block") plusImages(1);
 });
 
 prevImg.addEventListener("click", () => plusImages(-1));
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   if (event.which === 37 && modal.style.display === "block") plusImages(-1);
 });
 
 closeButton.addEventListener("click", closeModal);
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", (event) => {
   if (event.which === 27 && modal.style.display === "block") closeModal();
 });
 
@@ -214,7 +219,8 @@ skills.map((skill, index) => {
   badge.className = `badge skill${index}`;
   badge.innerHTML = `
   <div class="badge-img" title=${skill.name.replace(/\s/g, "")}>
-    <img src=${skill.image}  alt=${skill.name.replace(/\s/g, "")} /></div>
+    <img src=${skill.image}  alt=${skill.name.replace(/\s/g, "")} />
+  </div>
   `;
   return skillsBadges.appendChild(badge);
 });
@@ -227,7 +233,7 @@ const instagram = document.querySelector(".instagram");
 
 const openLink = (name, url) => {
   name.addEventListener("click", () => {
-    window.open(url, "_blank");
+    window.open(url, "_blank", "noopener");
   });
 };
 
