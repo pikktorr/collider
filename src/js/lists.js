@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Animal Crossing: New Horizons",
+    tool: "React.js",
+    about:
+      "Search villagers from the new Nintendo game Animal Crossing: New Horizons through a free API.",
+    image: require("../images/projects/animal_crossing_small.png"),
+    link: "https://pikktorr.github.io/animal-crossing-new-horizons/",
+  },
+  {
     title: "Breaking Text",
     tool: "Javascript, HTML, CSS, Materialize",
     about:
@@ -31,14 +39,6 @@ export const projects = [
     image: require("../images/projects/smartbrainer_small.jpg"),
     link: "https://smart-brainer-by-pikktorr.herokuapp.com/",
   },
-  {
-    title: "RoboFriends",
-    tool: "React.js",
-    about: "Type in names to get an instant search result.",
-    image: require("../images/projects/robofriends_small.png"),
-    link: "https://pikktorr.github.io/robofriends/",
-  },
-
   {
     title: "Infinite Carousel",
     tool: "JavaScript, HTML, CSS",
