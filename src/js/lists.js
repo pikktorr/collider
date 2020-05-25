@@ -325,11 +325,23 @@ export const skills = [
     name: "Sketchup",
   },
   {
+    image: require("../images/skills/tachyons.png"),
+    name: "Tachyons",
+  },
+  {
     image: require("../images/skills/trello.png"),
     name: "Trello",
   },
   {
+    image: require("../images/skills/twinmotion.png"),
+    name: "Twinmotion",
+  },
+  {
     image: require("../images/skills/vscode.png"),
     name: "VS Code",
+  },
+  {
+    image: require("../images/skills/webpack.png"),
+    name: "Webpack",
   },
 ];
