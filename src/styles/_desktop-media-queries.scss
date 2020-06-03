@@ -124,13 +124,11 @@ Screen = B/w 1025px to 1366px
       gap: 2.5rem;
       .project-container {
         box-shadow: none;
-        border: 2px solid $white;
         cursor: pointer;
         transition: all 0.15s ease-in-out;
         &:hover {
           box-shadow: $shadow;
           transform: scale(1.01);
-          border: 1px solid $white;
         }
       }
     }

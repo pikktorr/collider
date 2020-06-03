@@ -90,6 +90,11 @@ export const projects = [
 
 export const gallery = [
   {
+    image: require("../images/gallery/render-1.jpg"),
+    title: "Architectural visualization",
+    about: "Apartment House in Szeged",
+  },
+  {
     image: require("../images/gallery/msc-1.png"),
     title: "Outdoor Stage in Szeged",
     about: "Master Architecture Degree project",
@@ -115,27 +120,27 @@ export const gallery = [
     about: "Master Architecture Degree Project",
   },
   {
-    image: require("../images/gallery/bsc-1.jpg"),
+    image: require("../images/gallery/bsc-1.png"),
     title: "Musical Instruments Workshop in Pécs",
     about: "Architectural Engineering Degree Project",
   },
   {
-    image: require("../images/gallery/bsc-2.jpg"),
+    image: require("../images/gallery/bsc-2.png"),
     title: "Street View of the Workshop",
     about: "Architectural Engineering Degree Project",
   },
   {
-    image: require("../images/gallery/bsc-3.jpg"),
+    image: require("../images/gallery/bsc-3.png"),
     title: "Floor Plans and Sections",
     about: "Architectural Engineering Degree Project",
   },
   {
-    image: require("../images/gallery/bsc-4.jpg"),
+    image: require("../images/gallery/bsc-4.png"),
     title: "The Show-Window from the Street",
     about: "Architectural Engineering Degree Project",
   },
   {
-    image: require("../images/gallery/bsc-5.jpg"),
+    image: require("../images/gallery/bsc-5.png"),
     title: "Inner Showroom ",
     about: "Architectural Engineering Degree Project",
   },
@@ -150,7 +155,7 @@ export const gallery = [
     about: "Digital Art",
   },
   {
-    image: require("../images/gallery/digital-3.jpg"),
+    image: require("../images/gallery/digital-3.png"),
     title: "Messing with Watercolour",
     about: "Digital Art",
   },
@@ -160,7 +165,7 @@ export const gallery = [
     about: "Digital Art",
   },
   {
-    image: require("../images/gallery/digital-5.jpg"),
+    image: require("../images/gallery/digital-5.png"),
     title: "Concrete Forest",
     about: "Digital Art",
   },

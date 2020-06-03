@@ -128,13 +128,16 @@ slides.forEach((slide, index) =>
         currentImage(0);
         break;
       case 1:
-        currentImage(5);
+        currentImage(1);
         break;
       case 2:
-        currentImage(10);
+        currentImage(6);
         break;
       case 3:
-        currentImage(15);
+        currentImage(11);
+        break;
+      case 4:
+        currentImage(16);
         break;
       default:
         currentImage(0);
