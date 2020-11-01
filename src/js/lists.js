@@ -1,19 +1,11 @@
 export const projects = [
   {
-    title: "Animal Crossing: New Horizons",
-    tool: "React.js",
+    title: "Smart-Brainer",
+    tool: "React.js, PostgreSQL",
     about:
-      "Search villagers from the new Nintendo game Animal Crossing: New Horizons through a free API.",
-    image: require("../images/projects/animal_crossing_small.png"),
-    link: "https://pikktorr.github.io/animal-crossing-new-horizons/",
-  },
-  {
-    title: "Breaking Text",
-    tool: "Javascript, HTML, CSS, Materialize",
-    about:
-      "Write or insert text into the input field, then brake lines at the given number.",
-    image: require("../images/projects/breaking-text-small.jpg"),
-    link: "https://pikktorr.github.io/breaking-text/",
+      "This application detects faces on pasted images. Can use with any fictional email addresses!",
+    image: require("../images/projects/smartbrainer_small.jpg"),
+    link: "https://smart-brainer-by-pikktorr.herokuapp.com/",
   },
   {
     title: "Horsie Chess Board",
@@ -32,12 +24,20 @@ export const projects = [
     link: "https://pikktorr.github.io/cant-do-it-all/",
   },
   {
-    title: "Smart-Brainer",
-    tool: "React.js, PostgreSQL",
+    title: "Animal Crossing: New Horizons",
+    tool: "React.js",
     about:
-      "This application detects faces on pasted images. Can use with any fictional email addresses!",
-    image: require("../images/projects/smartbrainer_small.jpg"),
-    link: "https://smart-brainer-by-pikktorr.herokuapp.com/",
+      "Search villagers from the new Nintendo game Animal Crossing: New Horizons through a free API.",
+    image: require("../images/projects/animal_crossing_small.png"),
+    link: "https://pikktorr.github.io/animal-crossing-new-horizons/",
+  },
+  {
+    title: "Breaking Text",
+    tool: "Javascript, HTML, CSS, Materialize",
+    about:
+      "Write or insert text into the input field, then brake lines at the given number.",
+    image: require("../images/projects/breaking-text-small.jpg"),
+    link: "https://pikktorr.github.io/breaking-text/",
   },
   {
     title: "Infinite Carousel",
@@ -222,10 +222,6 @@ export const skills = [
     name: "Codesandbox",
   },
   {
-    image: require("../images/skills/commandline.png"),
-    name: "Command Line",
-  },
-  {
     image: require("../images/skills/css.png"),
     name: "CSS3",
   },
@@ -344,9 +340,5 @@ export const skills = [
   {
     image: require("../images/skills/vscode.png"),
     name: "VS Code",
-  },
-  {
-    image: require("../images/skills/webpack.png"),
-    name: "Webpack",
   },
 ];
