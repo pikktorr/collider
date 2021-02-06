@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: "Freaky Vegan Webshop",
+    title: "Freaky Vegan",
     tool: "React.js, Redux, Firebase, Stripe",
     about:
-      "*Ongoing project* Search for vegan cafes and restaurants, order ingredients, cakes and meals.",
+      "Search for vegan cafes and restaurants, order ingredients, cakes and meals.",
     image: require("../images/projects/pumpkin-cupcake.jpg"),
     link: "https://freaky-vegan.herokuapp.com/",
   },
